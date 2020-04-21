@@ -74,7 +74,7 @@
 
                                 @error('captcha')
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>Wrong Captcha</strong>
                                     </span>
                                 @enderror
                             </div>

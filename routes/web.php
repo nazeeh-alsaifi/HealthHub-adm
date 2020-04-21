@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
+//TODO: this will be used to refresh the captcha in the future
+//Route::get('/refresh_captcha',function (){ return captcha_src();});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
