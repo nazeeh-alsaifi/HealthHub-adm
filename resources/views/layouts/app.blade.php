@@ -23,8 +23,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                    <div><img src="/images/s-logo.png" alt="HealthHub logo"  style="height: 30px;margin-top: auto;" class="pr-3"></div>
+                    <div style="margin-top: auto;color:#e9605c;" title="Home Page"><b>H</b><span style="color: black">ealth</span></div>
+                    <div style="margin-top: auto;color: #e9605c;" title="Home Page"><b>H</b><span style="color: black">ub</span></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
