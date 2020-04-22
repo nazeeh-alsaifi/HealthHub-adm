@@ -15,11 +15,110 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        .header-bottom {
+            background-color: #C83C3C;
+            color: black;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 50px;
+            margin: 0;
+            position: relative;
+
+        }
+
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+        }
+
+
+        .content {
+            text-align: center;
+        }
+
+
+        .links > a {
+            color: white;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .fa {
+            padding:  10px;
+            font-size: 20px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 100%;
+
+        }
+
+        /* Add a hover effect if you want */
+        .fa:hover {
+            opacity: 0.9;
+
+        }
+
+        /* Set a specific color for each brand */
+
+        /* Facebook */
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        /* Twitter */
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
+    <header id="header" class="health-hub-header ">
+        <div class="header-top row" ></div>
+        <div class="header-mid row"></div>
+        <div class="header-bottom flex-center position-ref full-height row">
+            <div class="content flex-center">
+                <div class="links col-md-auto">
+                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://vapor.laravel.com">Vapor</a>
+                    <a href="https://github.com/laravel/laravel">الرئيسية</a>
+                </div>
+                <div class="social-media-links col-3">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="header-trending row"></div>
+    </header>
+
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
