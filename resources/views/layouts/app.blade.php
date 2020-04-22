@@ -88,6 +88,11 @@
             background: #55ACEE;
             color: white;
         }
+        /* Youtube */
+        .fa-youtube {
+            background: #55ACEE;
+            color: white;
+        }
     </style>
 </head>
 
