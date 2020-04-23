@@ -6,12 +6,15 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -155,7 +158,7 @@
         }
 
         /*-------------------------------------------*/
-        .header-bottom {
+        /*.header-bottom {
             background-color: #C83C3C;
             color: black;
             font-family: 'Nunito', sans-serif;
@@ -164,11 +167,11 @@
             margin: 0;
             position: relative;
 
-        }
+        }*/
 
-        {{-- fade in class --}}
+        /*fade in class */
 
-            .fade-in {
+        .fade-in {
             animation: fade-in 5s;
             animation-fill-mode: forwards;
         }
@@ -183,7 +186,7 @@
         }
 
 
-        li  a:hover:not(.active) {
+        li a:hover:not(.active) {
             background-color: #111;
         }
 
@@ -198,8 +201,7 @@
         }
 
 
-
-        .links > a {
+        .nav-item > a {
             color: white;
             padding: 0 25px;
             font-size: 13px;
@@ -210,7 +212,6 @@
             text-align: center;
 
         }
-
 
         /*---------------social media logos --------------------*/
         .fa {
@@ -300,7 +301,7 @@
     </div>
 
 
-    <div class="header-bottom flex-center  full-height fade-in">
+   {{-- <div class="header-bottom flex-center  full-height fade-in">
         <div class=" flex-center">
             <div class="links col-md-auto">
                 <a href="https://laravel.com/docs">Docs</a>
@@ -318,6 +319,62 @@
                 <a href="#" class="fa fa-youtube"></a>
             </div>
         </div>
+    </div>--}}
+
+    <div class="header-bottom">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <a class="navbar-brand" href="#">
+                <img src="/images/s-logo.png" width="50" height="50" alt="HealthHubLogo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="https://laravel.com/docs">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://laracasts.com">Laracasts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://laravel-news.com">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://blog.laravel.com">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://nova.laravel.com">Nova</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://forge.laravel.com">Forge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://vapor.laravel.com">Vapor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/laravel/laravel">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="social-links">
+                <ul class="navbar-nav mr-auto">
+                    <li >
+                        <a href="#" class="fa fa-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter"></a>
+                    </li>
+                    <li >
+                        <a href="#" class="fa fa-youtube"></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <div class="header-trending row"></div>
