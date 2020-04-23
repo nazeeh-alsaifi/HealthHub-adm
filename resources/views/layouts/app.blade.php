@@ -170,7 +170,7 @@
         }*/
 
         /*fade in class */
-
+/*
         .fade-in {
             animation: fade-in 5s;
             animation-fill-mode: forwards;
@@ -210,6 +210,20 @@
             letter-spacing: .1rem;
             text-decoration: none;
             text-align: center;
+
+        }*/
+       .navbar-nav > .nav-item > a {
+            padding: 0 25px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: sans-serif, Nunito;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-align: center;
+
+        }
+        .navbar-nav > .nav-item > li {
+            height: 100%;
 
         }
 
@@ -321,47 +335,49 @@
         </div>
     </div>--}}
 
-    <div class="header-bottom">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <a class="navbar-brand" href="#">
-                <img src="/images/s-logo.png" width="50" height="50" alt="HealthHubLogo">
+    <div class="header-bottom container-fluid pt-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger row">
+            <a class="navbar-brand d-flex col" href="#">
+                <div><img src="/images/s-logo.png" alt="HealthHub logo" style="height: 30px;margin-top: auto;"
+                          class="pr-3"></div>
+                <div style="margin-top: auto;color:#e9605c;" title="Home Page"><b>H</b><span
+                        style="color: black">ealth</span></div>
+                <div style="margin-top: auto;color: #e9605c;" title="Home Page"><b>H</b><span
+                        style="color: black">ub</span></div>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-links">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse justify-content-center col-9" id="site-links">
+                <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="https://laravel.com/docs">Docs</a>
+                        <a class="nav-link" href="https://laravel.com/docs">Docs</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://laracasts.com">Laracasts</a>
+                        <a class="nav-link" href="https://laracasts.com">Laracasts</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://laravel-news.com">News</a>
+                        <a class="nav-link" href="https://laravel-news.com">News</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://blog.laravel.com">Blog</a>
+                        <a class="nav-link" href="https://blog.laravel.com">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://nova.laravel.com">Nova</a>
+                        <a class="nav-link" href="https://nova.laravel.com">Nova</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://forge.laravel.com">Forge</a>
+                        <a class="nav-link" href="https://forge.laravel.com">Forge</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://vapor.laravel.com">Vapor</a>
+                        <a class="nav-link" href="https://vapor.laravel.com">Vapor</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://github.com/laravel/laravel">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="https://github.com/laravel/laravel">Home</a>
                     </li>
                 </ul>
             </div>
-            <div class="collapse navbar-collapse" id="social-links">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse justify-content-start col" id="social-links">
+                <ul class="navbar-nav">
                     <li >
                         <a href="#" class="fa fa-facebook"></a>
                     </li>
@@ -376,6 +392,10 @@
             </div>
         </nav>
     </div>
+
+
+
+
 
     <div class="header-trending row"></div>
 </header>
