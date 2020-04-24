@@ -79,13 +79,14 @@
     <div class="container d-flex align-items-center">
 
         <div class="logo d-flex mr-auto">
-            <h1 class="text-light pr-sm-1"><a href="index.html">HealthHub</a></h1>
+            <h1 class="text-light pr-sm-1"><a href="{{ url('/home') }}">HealthHub</a></h1>
 
             <div><img src="{{asset('/images/redh_blues.png')}}"
                       alt="HealthHub logo"
                       style="height: 30px;
                       margin-top: auto;"
-                      class="pr-3 rounded-circle"></div>
+                      class="pr-3 rounded-circle">
+            </div>
         </div>
 
         <nav class="nav-menu d-none d-lg-block "">
@@ -193,7 +194,8 @@
             &copy; Copyright <strong><span>HealthHub</span></strong>. All Rights Reserved
         </div>
     </div>
-</footer><!-- End Footer -->
+</footer>
+<!-- End Footer -->
 
 </body>
 </html>
