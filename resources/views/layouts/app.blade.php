@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <nav class="nav-menu d-none d-lg-block "">
+        <nav class="nav-menu d-none d-lg-block ">
             <ul >
                 <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
