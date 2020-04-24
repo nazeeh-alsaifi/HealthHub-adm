@@ -220,7 +220,7 @@
             <a href="http://www.twitter.com/heathhub" class="twitter"><i class="fa fa-twitter"></i></a>
             <a href="http://www.facebook.com/heathhub" class="facebook"><i class="fa fa-facebook"></i></a>
             <a href="http://www.instagram.com/healthhub" class="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="http://www.skype.com/healthhub" class="google-plus"><i class="fa fa-skype"></i></a>
+            <a href="http://www.skype.com/healthhub" class="skype"><i class="fa fa-skype"></i></a>
             <a href="http://www.linkedin.com/healthhub" class="linkedin"><i class="fa fa-linkedin"></i></a>
         </div>
         <div class="copyright">
