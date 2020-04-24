@@ -414,18 +414,17 @@
 <footer id="footer" class="fixed-bottom">
     <div class="container">
         <h3>HealthHub</h3>
-        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+        <p>Your Only Place To Feel Healthy</p>
         <div class="social-links">
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="fa fa-skype"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="http://www.twitter.com/heathhub" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.facebook.com/heathhub" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="http://www.instagram.com/healthhub" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="http://www.skype.com/healthhub" class="google-plus"><i class="fa fa-skype"></i></a>
+            <a href="http://www.linkedin.com/healthhub" class="linkedin"><i class="fa fa-linkedin"></i></a>
         </div>
         <div class="copyright">
             &copy; Copyright <strong><span>HealthHub</span></strong>. All Rights Reserved
         </div>
-
     </div>
 </footer><!-- End Footer -->
 
