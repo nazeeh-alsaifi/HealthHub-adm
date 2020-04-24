@@ -75,7 +75,7 @@
 </div>
 
 <!-- ======= Header ======= -->
-<header id="header" class="d-flex align-items-center header-transparent">
+<header id="header" class="d-flex align-items-center header-transparent shadow-lg">
     <div class="container d-flex align-items-center">
 
         <div class="logo d-flex mr-auto">
@@ -88,18 +88,19 @@
                       class="pr-3 rounded-circle"></div>
         </div>
 
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="drop-down"><a href="">Register/Login</a>
+        <nav class="nav-menu d-none d-lg-block "">
+            <ul >
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item drop-down">
+                    <a class="nav-link" href="">Register/Login</a>
                     <ul>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li><a class="nav-link" href="#">Register</a></li>
+                        <li><a class="nav-link" href="#">Login</a></li>
                     </ul>
                 </li>
                 <li><a href="#contact">Contact</a></li>
