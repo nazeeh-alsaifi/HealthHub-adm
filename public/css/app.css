@@ -11409,7 +11409,7 @@ article {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #ca3c40;
+  background: #ff3e43;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -11422,7 +11422,6 @@ article {
 }
 
 #footer .social-links a:hover {
-  background: #410b13;
   color: #fff;
   text-decoration: none;
 }
@@ -11434,7 +11433,7 @@ article {
 /* Add a hover effect if you want */
 
 .fa:hover {
-  color: white;
+  color: #410b13;
 }
 
 /* Set a specific color for each brand */
@@ -11442,19 +11441,19 @@ article {
 /* Facebook */
 
 .fa-facebook {
-  color: white;
+  color: #410b13;
 }
 
 /* Twitter */
 
 .fa-twitter {
-  color: white;
+  color: #410b13;
 }
 
 /* Youtube */
 
 .fa-youtube {
-  color: white;
+  color: #410b13;
 }
 
 /*-------------------------------------------------*/
