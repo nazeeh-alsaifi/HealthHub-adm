@@ -1,26 +1,36 @@
-
 /*---------------social media logos --------------------*/
+
+$social_media_color : #410b13;
+
+$social_media_hover_color : #fff;
+
 
 
 /* Add a hover effect if you want */
 .fa:hover {
-    color: #410b13;
-}
+    color: $social_media_color;
 
-/* Set a specific color for each brand */
-/* Facebook */
-.fa-facebook {
-    color: #410b13;
-}
+    &-facebook {
+        color: $social_media_hover_color;
+    }
 
-/* Twitter */
-.fa-twitter {
-    color: #410b13;
-}
+    &-twitter {
+        color: $social_media_hover_color;
+    }
 
-/* Youtube */
-.fa-youtube {
-    color: #410b13;
-}
+    &-youtube {
+        color: $social_media_hover_color;
+    }
 
-/*-------------------------------------------------*/
+    &-instagram {
+        color: $social_media_hover_color;
+    }
+
+    &-skype {
+        color: $social_media_hover_color;
+    }
+
+    &-linkedin {
+        color: $social_media_hover_color;
+    }
+}

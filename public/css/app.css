@@ -11436,27 +11436,29 @@ article {
   color: #410b13;
 }
 
-/* Set a specific color for each brand */
-
-/* Facebook */
-
-.fa-facebook {
-  color: #410b13;
+.fa:hover-facebook {
+  color: #fff;
 }
 
-/* Twitter */
-
-.fa-twitter {
-  color: #410b13;
+.fa:hover-twitter {
+  color: #fff;
 }
 
-/* Youtube */
-
-.fa-youtube {
-  color: #410b13;
+.fa:hover-youtube {
+  color: #fff;
 }
 
-/*-------------------------------------------------*/
+.fa:hover-instagram {
+  color: #fff;
+}
+
+.fa:hover-skype {
+  color: #fff;
+}
+
+.fa:hover-linkedin {
+  color: #fff;
+}
 
 /*--------------------------------------------------------------
 # header navigation Menu
