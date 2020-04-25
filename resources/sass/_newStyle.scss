@@ -3,121 +3,10 @@
     background: white;
 }
 
-/*--------------------------------------------------------------
-# barigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
-.nav-menu, .nav-menu * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+main {
+    height: 60vh;
 }
 
-.nav-menu > ul > li {
-    position: relative;
-    white-space: nowrap;
-    float: left;
-}
-
-.nav-menu a {
-    display: block;
-    position: relative;
-    color: #fff;
-    padding: 5px 15px 7px 15px;
-    margin-left: 5px;
-    transition: 0.3s;
-    font-size: 14px;
-    border-radius: 50px;
-    font-family: "Open Sans", sans-serif;
-}
-
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    background: #d33e43;
-    text-decoration: none;
-    color: #410b13;
-}
-
-.nav-menu .drop-down ul {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: calc(100% - 30px);
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    padding: 10px 0;
-    background: #3D3F4B;
-    box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
-    transition: ease all 0.3s;
-    border-radius: 15px;
-    margin-top: 5px;
-}
-
-.nav-menu .drop-down:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-}
-
-.nav-menu .drop-down li {
-    min-width: 180px;
-    position: relative;
-}
-
-.nav-menu .drop-down ul a {
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: none;
-    color: #fff;
-}
-
-.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-    color:#d33e43;
-    background: none;
-
-}
-
-.nav-menu .drop-down > a:after {
-    content: "\ea99";
-    font-family: IcoFont, serif;
-    padding-left: 5px;
-
-}
-
-.nav-menu .drop-down .drop-down ul {
-    top: 0;
-    left: calc(100% - 30px);
-}
-
-.nav-menu .drop-down .drop-down:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-}
-
-.nav-menu .drop-down .drop-down > a {
-    padding-right: 35px;
-}
-
-.nav-menu .drop-down .drop-down > a:after {
-    content: "\eaa0";
-    font-family: IcoFont, serif;
-    position: absolute;
-    right: 15px;
-}
-
-@media (max-width: 1366px) {
-    .nav-menu .drop-down .drop-down ul {
-        left: -90%;
-    }
-    .nav-menu .drop-down .drop-down:hover > ul {
-        left: -100%;
-    }
-    .nav-menu .drop-down .drop-down > a:after {
-        content: "\ea9d";
-    }
-}
 /*---------------------------------------------------*/
 /*logo HEALTHHUB animation */
 
@@ -245,129 +134,17 @@
         visibility: hidden;
     }
 }
+
 /*-----------------------------------------*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-    background: #14151c;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    padding: 30px 0;
-}
-
-#footer h3 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #fff;
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    padding: 0;
-    margin: 0 0 15px 0;
-}
-
-#footer p {
-    font-size: 15px;
-    font-style: italic;
-    padding: 0;
-    margin: 0 0 40px 0;
-}
-
-#footer .social-links {
-    margin: 0 0 40px 0;
-}
-
-#footer .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: #ca3c40;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-}
-
-#footer .social-links a:hover {
-    background: #410b13;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-/*------------------------------------------------*/
-/*---------------social media logos --------------------*/
-
-
-/* Add a hover effect if you want */
-.fa:hover {
-    color: white;
-}
-
-/* Set a specific color for each brand */
-/* Facebook */
-.fa-facebook {
-    color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-    color: white;
-}
-
-/* Youtube */
-.fa-youtube {
-    color: white;
-}
-
-/*-------------------------------------------------*/
-
-.text-bar{
+.text-bar {
     background: #1b1e21;
     width: 100%;
 }
+
 .text-bar p {
-    border-right: solid 1px rgba(0,255,0,.75);
+    border-right: solid 1px rgba(0, 255, 0, .75);
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Libre Baskerville', serif;
@@ -376,26 +153,33 @@
     position: relative;
     left: 41%;
     /* Animation */
-    animation: animated-text 3s steps(29,end) 1s 1 normal both,
-    animated-cursor 600ms steps(29,end) infinite;
+    animation: animated-text 3s steps(29, end) 1s 1 normal both,
+    animated-cursor 600ms steps(29, end) infinite;
     animation-delay: 2s;
 }
 
 
 /* text animation */
 
-@keyframes animated-text{
-    from{width: 0;}
-    to{width: 270px;}
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 270px;
+    }
 }
 
 /* cursor animations */
 
-@keyframes animated-cursor{
-    from{border-right-color: red;}
-    to{border-right-color: transparent;}
+@keyframes animated-cursor {
+    from {
+        border-right-color: red;
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
-
 
 
 article {
@@ -409,8 +193,6 @@ article {
 /* Clear floats after the columns */
 
 
-
-
 /*template for articles*/
 
 .flip-card-container {
@@ -419,6 +201,7 @@ article {
 
 
 }
+
 .flip-card {
     width: 100%;
     height: 100%;
@@ -426,12 +209,13 @@ article {
     transform-style: preserve-3d;
 
 
-
 }
+
 .flip-card-container:hover .flip-card {
     transform: rotateY(180deg);
     /* <=>  rotateY(.5turn) */
 }
+
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
     position: absolute;
@@ -443,10 +227,12 @@ article {
     align-items: center;
     /* border-radius: 0.5rem; */
 }
+
 .flip-card-front {
     background-color: #333;
     color: #fff;
 }
+
 .flip-card-back {
     background-color: #517fa4;
     color: #fff;
@@ -458,12 +244,14 @@ article {
     height: 100%;
     /* border-radius: 0.5rem; */
 }
+
 .flip-card-back p {
     text-align: center;
     margin: 1rem;
     font-size: 1.4rem;
     line-height: 1.5rem;
 }
+
 .flip-card-back p span {
     display: block;
     font-size: 1rem;
@@ -471,6 +259,7 @@ article {
     font-weight: bold;
     margin-top: 1.25rem;
 }
+
 .column {
     float: left;
     width: 33.33%;
@@ -489,7 +278,7 @@ article {
 
 /* fade in class */
 
-.fade-in{
+.fade-in {
     animation: fade-in 5s;
     animation-fill-mode: forwards;
 }
@@ -498,7 +287,7 @@ article {
     from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
 }
@@ -536,29 +325,34 @@ article {
 
 
 }
+
 .second {
     opacity: 0;
     animation: fadeInUp 2s ease-in-out 0s forwards; /* <=>  rotateY(.5turn) */
     animation-delay: 3s;
 
 }
+
 .third {
     opacity: 0;
     animation: fadeInUp 2s ease-in-out 0s forwards; /* <=>  rotateY(.5turn) */
     animation-delay: 4s;
 
 }
+
 .fourth {
     opacity: 0;
     animation: fadeInUp 2s ease-in-out 0s forwards; /* <=>  rotateY(.5turn) */
     animation-delay: 5s;
 }
+
 .fifth {
     opacity: 0;
     animation: fadeInUp 2s ease-in-out 0s forwards; /* <=>  rotateY(.5turn) */
     animation-delay: 6s;
 
 }
+
 .sixth {
     opacity: 0;
     animation: fadeInUp 2s ease-in-out 0s forwards; /* <=>  rotateY(.5turn) */
