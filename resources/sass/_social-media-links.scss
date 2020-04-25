@@ -1,36 +1,38 @@
 /*---------------social media logos --------------------*/
 
-$social_media_color : #410b13;
+$social_media_color : #fff;
 
-$social_media_hover_color : #fff;
+$social_media_hover_color : #410b13;
 
 
 
 /* Add a hover effect if you want */
-.fa:hover {
-    color: $social_media_color;
+.fa{
+    &:hover{
+        color: $social_media_hover_color;
+    }
 
     &-facebook {
-        color: $social_media_hover_color;
+        color: $social_media_color;
     }
 
     &-twitter {
-        color: $social_media_hover_color;
+        color: $social_media_color;
     }
 
     &-youtube {
-        color: $social_media_hover_color;
+        color: $social_media_color;
     }
 
     &-instagram {
-        color: $social_media_hover_color;
+        color: $social_media_color;
     }
 
     &-skype {
-        color: $social_media_hover_color;
+        color: $social_media_color;
     }
 
     &-linkedin {
-        color: $social_media_hover_color;
+        color: $social_media_color;
     }
 }
