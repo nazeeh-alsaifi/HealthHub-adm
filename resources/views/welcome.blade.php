@@ -3,14 +3,13 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="fade-in"><img src="/images/heart.gif" width="150px" height="170px"
-                                      style="position: relative;left: 45%">
+            <div class="fade-in"><img src={{asset('/images/heart.gif')}} width="150px" height="170px"
+                                      style="position: relative;left: 45%" alt="heart"/>
             </div>
             <div class="fade-in">
                 <div class="text-bar"><p>Your Way For Better Life.</p></div>
             </div>
             <div class="basic">
-
                 <article>
                     <div class="row">
                         <div class="column">
@@ -18,8 +17,7 @@
                                 <div class="flip-card-container">
                                     <div class="flip-card">
                                         <div class="flip-card-front">
-
-                                            <img src="/images/s-logo.png" alt="Albert Einstein">
+                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
                                         </div>
                                         <div class="flip-card-back">
                                             <p>
@@ -27,19 +25,18 @@
                                                 sure
                                                 about the universe."
                                                 <span>- Albert Einstein -</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="column">
                             <div class="second">
                                 <div class="flip-card-container">
                                     <div class="flip-card">
                                         <div class="flip-card-front">
-
-                                            <img src="/images/s-logo.png" alt="Albert Einstein">
+                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
                                         </div>
                                         <div class="flip-card-back">
                                             <p>
@@ -47,6 +44,7 @@
                                                 sure
                                                 about the universe."
                                                 <span>- Albert Einstein -</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -57,8 +55,7 @@
                                 <div class="flip-card-container">
                                     <div class="flip-card">
                                         <div class="flip-card-front">
-
-                                            <img src="/images/s-logo.png" alt="Albert Einstein">
+                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
                                         </div>
                                         <div class="flip-card-back">
                                             <p>
@@ -66,20 +63,18 @@
                                                 sure
                                                 about the universe."
                                                 <span>- Albert Einstein -</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="column">
                             <div class="fourth">
                                 <div class="flip-card-container">
                                     <div class="flip-card">
                                         <div class="flip-card-front">
-
-                                            <img src="/images/s-logo.png" alt="Albert Einstein">
+                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
                                         </div>
                                         <div class="flip-card-back">
                                             <p>
@@ -87,19 +82,18 @@
                                                 sure
                                                 about the universe."
                                                 <span>- Albert Einstein -</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="column">
                             <div class="fifth">
                                 <div class="flip-card-container">
                                     <div class="flip-card">
                                         <div class="flip-card-front">
-
-                                            <img src="/images/s-logo.png" alt="Albert Einstein">
+                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
                                         </div>
                                         <div class="flip-card-back">
                                             <p>
@@ -107,19 +101,18 @@
                                                 sure
                                                 about the universe."
                                                 <span>- Albert Einstein -</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="column">
                             <div class="sixth">
                                 <div class="flip-card-container">
                                     <div class="flip-card">
                                         <div class="flip-card-front">
-
-                                            <img src="/images/s-logo.png" alt="Albert Einstein">
+                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
                                         </div>
                                         <div class="flip-card-back">
                                             <p>
@@ -127,6 +120,7 @@
                                                 sure
                                                 about the universe."
                                                 <span>- Albert Einstein -</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
