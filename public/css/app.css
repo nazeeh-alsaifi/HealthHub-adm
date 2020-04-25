@@ -10887,46 +10887,6 @@ a.text-dark:focus {
 }
 
 /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-
-#header {
-  height: 70px;
-  transition: all 0.5s;
-  z-index: 997;
-  background: #3D3F4B;
-}
-
-#header .header-transparent {
-  background: transparent;
-}
-
-#header .header-scrolled {
-  background: #3D3F4B;
-}
-
-#header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-#header .logo h1 a,
-#header .logo h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-#header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
-}
-
-/*--------------------------------------------------------------
 # barigation Menu
 --------------------------------------------------------------*/
 
@@ -11306,6 +11266,7 @@ a.text-dark:focus {
 
 .text-bar {
   background: #1b1e21;
+  width: 100%;
 }
 
 .text-bar p {
@@ -11573,5 +11534,46 @@ article {
   /* <=>  rotateY(.5turn) */
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------
+*/
+
+#header {
+  height: 70px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: #3D3F4B;
+}
+
+#header .header-transparent {
+  background: transparent;
+}
+
+#header .header-scrolled {
+  background: #3D3F4B;
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
 }
 
