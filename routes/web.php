@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 //TODO: this will be used to refresh the captcha in the future
 //Route::get('/refresh_captcha',function (){ return captcha_src();});
