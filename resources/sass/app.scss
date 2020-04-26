@@ -11,3 +11,22 @@
 @import 'footer';
 @import "social-media-links";
 @import "header-navigation";
+@import "views_styling/register-view";
+@import "views_styling/login-view";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+}
+/*
+
+main {
+    padding-bottom: 32vh;
+    padding-top: 8vh;
+}
+*/
+

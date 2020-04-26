@@ -162,9 +162,10 @@
             </div>
         </nav>
     --}}
-    <main class="py-4">
+    <main>
         @yield('content')
-    </main><!-- ======= Footer ======= -->
+    </main>
+    <!-- ======= Footer ======= -->
     <footer id="footer" class="fixed">
         <div class="container">
             <h3>HealthHub</h3>
