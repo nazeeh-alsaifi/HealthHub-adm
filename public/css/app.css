@@ -11539,12 +11539,6 @@ article {
   background: none;
 }
 
-.nav-menu .drop-down > a:after {
-  content: "\EA99";
-  font-family: IcoFont, serif;
-  padding-left: 5px;
-}
-
 .nav-menu .drop-down .drop-down ul {
   top: 0;
   left: calc(100% - 30px);
