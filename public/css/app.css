@@ -11586,6 +11586,11 @@ article {
   padding-bottom: 32vh;
 }
 
+#home {
+  max-width: 100%;
+  padding-bottom: 32vh;
+}
+
 * {
   margin: 0;
   padding: 0;
