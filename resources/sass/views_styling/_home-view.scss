@@ -2,3 +2,9 @@
     max-width: 100%;
     padding-bottom: 32vh;
 }
+.smaller-card{
+    background: lighten(#3D3F4B,50%);
+    a {
+        color: #3D3F4B
+    }
+}

@@ -3,131 +3,92 @@
 @section('content')
     <div id="home" class="container">
         <div class="row justify-content-center">
-            <div class="fade-in"><img src={{asset('/images/heart.gif')}} width="150px" height="170px"
-                                      style="position: relative;left: 45%" alt="heart"/>
-            </div>
-            <div class="fade-in">
-                <div class="text-bar"><p>Your Way For Better Life.</p></div>
-            </div>
-            <div class="basic">
-                <article>
+            <div class="py-4 col-md-8">
+                <div class="card">
+                    <div class="card-header">Articles</div>
+
                     <div class="row">
-                        <div class="column">
-                            <div class="first">
-                                <div class="flip-card-container">
-                                    <div class="flip-card">
-                                        <div class="flip-card-front">
-                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <p>
-                                                "Two things are infinite: the universe and human stupidity; and I'm not
-                                                sure
-                                                about the universe."
-                                                <span>- Albert Einstein -</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 mt-2">
+                            <div class="smaller-card card h-100">
+                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Article One</a>
+                                    </h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                                        numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi
+                                        itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil,
+                                        dolorem!</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="second">
-                                <div class="flip-card-container">
-                                    <div class="flip-card">
-                                        <div class="flip-card-front">
-                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <p>
-                                                "Two things are infinite: the universe and human stupidity; and I'm not
-                                                sure
-                                                about the universe."
-                                                <span>- Albert Einstein -</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 mt-2">
+                            <div class="smaller-card card h-100">
+                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Article Two</a>
+                                    </h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                        viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="third">
-                                <div class="flip-card-container">
-                                    <div class="flip-card">
-                                        <div class="flip-card-front">
-                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <p>
-                                                "Two things are infinite: the universe and human stupidity; and I'm not
-                                                sure
-                                                about the universe."
-                                                <span>- Albert Einstein -</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 mt-2">
+                            <div class="smaller-card card h-100">
+                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Article Three</a>
+                                    </h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                                        quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus
+                                        necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel
+                                        quam!</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="fourth">
-                                <div class="flip-card-container">
-                                    <div class="flip-card">
-                                        <div class="flip-card-front">
-                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <p>
-                                                "Two things are infinite: the universe and human stupidity; and I'm not
-                                                sure
-                                                about the universe."
-                                                <span>- Albert Einstein -</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 mt-2">
+                            <div class="smaller-card card h-100">
+                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Article Four</a>
+                                    </h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                        viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="fifth">
-                                <div class="flip-card-container">
-                                    <div class="flip-card">
-                                        <div class="flip-card-front">
-                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <p>
-                                                "Two things are infinite: the universe and human stupidity; and I'm not
-                                                sure
-                                                about the universe."
-                                                <span>- Albert Einstein -</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 mt-2">
+                            <div class="smaller-card card h-100">
+                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Article Five</a>
+                                    </h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                        viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="sixth">
-                                <div class="flip-card-container">
-                                    <div class="flip-card">
-                                        <div class="flip-card-front">
-                                            <img src={{asset('/images/s-logo.png')}} alt="AlbertEinstein" />
-                                        </div>
-                                        <div class="flip-card-back">
-                                            <p>
-                                                "Two things are infinite: the universe and human stupidity; and I'm not
-                                                sure
-                                                about the universe."
-                                                <span>- Albert Einstein -</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 mt-2">
+                            <div class="smaller-card card h-100">
+                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Article Six</a>
+                                    </h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo,
+                                        voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo,
+                                        esse.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </article>
+                    <!-- /.row -->
+                </div>
             </div>
         </div>
     </div>

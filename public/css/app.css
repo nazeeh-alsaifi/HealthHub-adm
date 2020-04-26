@@ -11591,6 +11591,14 @@ article {
   padding-bottom: 32vh;
 }
 
+.smaller-card {
+  background: #bdbfca;
+}
+
+.smaller-card a {
+  color: #3D3F4B;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11601,11 +11609,8 @@ body {
   min-height: 100vh;
 }
 
-/*
-
-main {
-    padding-bottom: 32vh;
-    padding-top: 8vh;
+.card-header {
+  background: #3D3F4B;
+  color: #fff;
 }
-*/
 
