@@ -185,6 +185,5 @@
     <!-- End Footer -->
 </div>
 {{--end app--}}
-
 </body>
 </html>
