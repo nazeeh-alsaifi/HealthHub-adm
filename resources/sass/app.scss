@@ -6,11 +6,17 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-@import 'newStyle';
 @import 'header';
 @import 'footer';
 @import "social-media-links";
 @import "header-navigation";
+@import 'newStyle';
+@import "logo";
+@import "loader";
+@import "text-bar";
+@import "fade-in-animation";
+@import "layout";
+@import "slider";
 @import "views_styling/register-view";
 @import "views_styling/login-view";
 @import "views_styling/home-view";
