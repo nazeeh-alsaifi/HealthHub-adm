@@ -10936,7 +10936,7 @@ a.text-dark:focus {
   bottom: 0;
   width: 100%;
   position: relative;
-  height: 10%;
+  height: 50vh;
 }
 
 #footer h3 {
