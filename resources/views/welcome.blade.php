@@ -1,3 +1,4 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <div class="loader" style="animation-delay: 4s">
     <svg id="logo" width="556" height="74" viewBox="0 0 556 74" fill="none"
          xmlns="http://www.w3.org/2000/svg">
@@ -32,5 +33,5 @@
     setTimeout(function () {
         window.location.href= 'home'; // the redirect goes here
 
-    },500); // 5 seconds
+    },6000); // 5 seconds
 </script>
