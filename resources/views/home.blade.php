@@ -8,7 +8,7 @@
                     <div class="caption">
                     <h1>1. Heart diseases</h1>
                     <p>The most known heart diseases in Uk</p>
-                    <a herf="/articles">Find More Here</a>
+                        <a href="/articles">Find More Here</a>
                 </div>
             </div>
             </div>
@@ -17,7 +17,7 @@
                     <div class="caption">
                     <h1>2. Heart attacks</h1>
                     <p>Did you know that 30% of elders die because of it</p>
-                    <a herf="/articles">Find More Here</a>
+                        <a href="/articles">Find More Here</a>
                 </div>
             </div>
             </div>
@@ -26,7 +26,7 @@
                     <div class="caption">
                     <h1>3. Improving your Health</h1>
                     <p>you can find out more about this topic in the link below</p>
-                    <a herf="/articles">Find More Here</a>
+                        <a href="/articles">Find More Here</a>
 
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         <div class="caption">
                         <h1>4. How to improve your health</h1>
                         <p>you can find out more about this topic in the link below</p>
-                        <a herf="/articles">Find More Here</a>
+                            <a href="/articles">Find More Here</a>
                         </div>
                     </div>
                 </div>
@@ -141,4 +141,5 @@
             </div>
         </div>
     </div>
+
 @endsection
