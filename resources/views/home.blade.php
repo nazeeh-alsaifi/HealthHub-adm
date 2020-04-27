@@ -1,6 +1,55 @@
 @extends('layouts.app')
 
 @section('content')
+    <section class="home-slideshow">
+        <div class="slider">
+            <div class="slide active-slide" style="background-image: url('/images/Health-1.jpg')">
+                <div class="text-container">
+                    <div class="caption">
+                    <h1>1. Heart diseases</h1>
+                    <p>The most known heart diseases in Uk</p>
+                    <a herf="/articles">Find More Here</a>
+                </div>
+            </div>
+            </div>
+            <div class="slide" style="background-image: url('/images/Health-2.jpg')">
+                <div class="text-container">
+                    <div class="caption">
+                    <h1>2. Heart attacks</h1>
+                    <p>Did you know that 30% of elders die because of it</p>
+                    <a herf="/articles">Find More Here</a>
+                </div>
+            </div>
+            </div>
+            <div class="slide" style="background-image: url('/images/Health-3.jpg')">
+                <div class="text-container">
+                    <div class="caption">
+                    <h1>3. Improving your Health</h1>
+                    <p>you can find out more about this topic in the link below</p>
+                    <a herf="/articles">Find More Here</a>
+
+                    </div>
+                </div>
+            </div>
+                <div class="slide" style="background-image: url('/images/Health-4.jpg')">
+                    <div class="text-container">
+                        <div class="caption">
+                        <h1>4. How to improve your health</h1>
+                        <p>you can find out more about this topic in the link below</p>
+                        <a herf="/articles">Find More Here</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="controls">
+            <div class="prev"><</div>
+            <div class="next">></div>
+        </div>
+        <div class="indicator">
+
+        </div>
+    </section>
+
     <div id="home" class="container">
         <div class="row justify-content-center">
             <div class="py-4 col-md-8">
