@@ -17,9 +17,11 @@
 @import "fade-in-animation";
 @import "layout";
 @import "slider";
-@import "views_styling/register-view";
-@import "views_styling/login-view";
+@import "views_styling/auth/register-view";
+@import "views_styling/auth/login-view";
 @import "views_styling/home-view";
+@import "views_styling/articles/create";
+
 *{
     margin: 0;
     padding: 0;

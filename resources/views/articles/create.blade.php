@@ -6,50 +6,81 @@
             <div class="py-4 col-md-8">
                 <div class="card">
                     <div class="card-header">Create New Article</div>
-                        <form method="" action="" >
 
-                            <div class="card-body">
-                                <div class="form-group row">
-                                    <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
+                    <div class="card-body">
+                        <form method="" action="">
 
-                                    <div class="col-md-6">
-                                        <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" title="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                            <div class="form-group row" style="">
+                                <label for="title"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
 
-                                        @error('title')
-                                        <span class="invalid-feedback" role="alert">
+                                <div class="col-md-6">
+                                    <input id="image" type="file" class="form-control-file" name="image">
+                                    @error('image')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                        @enderror
-                                    </div>
+                                    @enderror
                                 </div>
+                            </div>
 
-                                <div class="form-group row">
-                                    <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Brief Description') }}</label>
+                            <div class="form-group row">
+                                <label for="title"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
-                                    <div class="col-md-6">
-                                        <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" description="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
+                                <div class="col-md-6">
+                                    <input id="title" type="text"
+                                           class="form-control @error('title') is-invalid @enderror" name="title"
+                                           value="{{ old('title') }}" required autocomplete="title" autofocus>
 
-                                        @error('description')
-                                        <span class="invalid-feedback" role="alert">
+                                    @error('title')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                        @enderror
-                                    </div>
+                                    @enderror
                                 </div>
+                            </div>
 
-                                <div class="form-group row">
-                                    <label for="content" class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
+                            <div class="form-group row">
+                                <label for="description"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
-                                    <div class="col-md-6">
-                                        <input id="content" type="text" class="form-control @error('content') is-invalid @enderror" content="content" value="{{ old('content') }}" required autocomplete="content" autofocus>
+                                <div class="col-md-6">
+                                    <input id="description" type="text"
+                                           class="form-control @error('description') is-invalid @enderror"
+                                           name="description" value="{{ old('description') }}" required
+                                           autocomplete="description" autofocus>
 
-                                        @error('content')
-                                        <span class="invalid-feedback" role="alert">
+                                    @error('description')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                        @enderror
-                                    </div>
+                                    @enderror
                                 </div>
+                            </div>
+{{--                             i named it article-content instead of content alone so it doesn't interfere with yield content in app.blade.php--}}
+                            <div class="form-group row">
+                                <label for="article-content"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
+
+                                <div class="col-md-6">
+                                    <textarea id="article-content"  class="form-control" name="article-content" required></textarea>
+
+                                    @error('article-content')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Add New Article') }}
+                                    </button>
+                                </div>
+                            </div>
 
                         </form>
                     </div>
