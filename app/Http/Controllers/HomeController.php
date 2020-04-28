@@ -25,11 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-/* Controller for articles page*/
-
-    public function articles()
-    {
-        return view('articles');
-    }
 }
