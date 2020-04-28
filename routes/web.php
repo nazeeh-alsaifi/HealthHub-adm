@@ -26,3 +26,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/articles', 'HomeController@articles') ;
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+//-------- Articles Controller Routes-----------
+Route::get('/article','ArticleController@create');
+
+//------------ end
