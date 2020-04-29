@@ -1,102 +1,78 @@
 <?php
 
-
-
-namespace App\Http\Controllers\Auth;
+ namespace App\Http\Controllers\Auth;
 use Auth;
+ use App\Http\Controllers\Controller;
+ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-
-use App\Http\Controllers\Controller;
-
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
-use Illuminate\Http\Request;
-
-
-
-class LoginController extends Controller
-
-{
-
-
-
-    use AuthenticatesUsers;
-
-
-
-    protected $redirectTo = '/home';
-
-    /**
-
-     * Create a new controller instance.
-
-     *
-
-     * @return void
-
+ class LoginController extends Controller
+ {
+     /*
+     |--------------------------------------------------------------------------
+     | Login Controller
+     |--------------------------------------------------------------------------
+     |
+     | This controller handles authenticating users for the application and
+     | redirecting them to your home screen. The controller uses a trait
+     | to conveniently provide its functionality to your applications.
+     |
      */
 
-    public function __construct()
+     use AuthenticatesUsers;
 
-    {
+     /**
+      * Where to redirect users after login.
+      *
+      * @var string
+      */
+     protected $redirectTo = '/home';
 
-        $this->middleware('guest')->except('logout');
+     /**
+      * Login username to be used by the controller.
+      *
+      * @var string
+      */
+     protected $username;
 
+     /**
+      * Create a new controller instance.
+      */
+     public function __construct()
+     {
+         $this->middleware('guest')->except('logout');
+
+         $this->username = $this->findUsername();
+     }
+
+     /**
+      * Get the login username to be used by the controller.
+      *
+      * @return string
+      */
+     public function findUsername()
+     {
+         $login = request()->input('login');
+
+         $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+         request()->merge([$fieldType => $login]);
+
+         return $fieldType;
+     }
+
+     /**
+      * Get username property.
+      *
+      * @return string
+      */
+     public function username()
+     {
+         return $this->username;
+     }
+     public function logout() {
+      Auth::logout();
+      return redirect('/home');
     }
-
-
-
-    /**
-
-     * Create a new controller instance.
-
-     *
-
-     * @return void
-
-     */
-
-    public function login(Request $request)
-
-    {
-
-        $input = $request->all();
-
-
-
-        $this->validate($request, [
-
-            'username' => 'required',
-
-            'password' => 'required',
-
-        ]);
-
-
-
-        $fieldType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-
-        if(auth()->attempt(array($fieldType => $input['username'], 'password' => $input['password'])))
-
-        {
-
-            return redirect()->route('home');
-
-        }else{
-
-            return redirect()->route('login')
-
-                ->with('error','Email-Address And Password Are Wrong.');
-
-        }
-
-
-
-    }
-    public function logout() {
-         Auth::logout();
-         return redirect('/home');
-       }
 }
 
 
