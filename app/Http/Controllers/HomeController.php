@@ -25,4 +25,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
+     public function user($user)
+        {
+        if($user=='admin')
+        return view('admin');
+        else
+            return view('home');
+        }
 }
