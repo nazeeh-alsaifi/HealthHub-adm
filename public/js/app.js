@@ -49799,99 +49799,103 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app'
-}); //slidershow script
-
-slides = document.querySelector(".slider").children;
-prev = document.querySelector(".prev");
-next = document.querySelector(".next");
-indicator = document.querySelector(".indicator");
-index = 0;
-prev.addEventListener("click", function () {
-  prevSlide();
-  updateCircleIndicator();
-  resetTimer();
 });
-next.addEventListener("click", function () {
-  nextSlide();
-  updateCircleIndicator();
-  resetTimer();
-}); // ----create circle indicator----
+var tab = window.location.href.indexOf('home');
 
-function circleIndicator() {
-  for (var i = 0; i < slides.length; i++) {
-    div = document.createElement("div");
-    div.innerHTML = i + 1;
-    div.setAttribute("onclick", "indicateSlide(this)");
-    div.id = i;
+if (tab != -1) {
+  // ----create circle indicator----
+  var circleIndicator = function circleIndicator() {
+    for (var i = 0; i < slides.length; i++) {
+      div = document.createElement("div");
+      div.innerHTML = i + 1;
+      div.setAttribute("onclick", "indicateSlide(this)");
+      div.id = i;
 
-    if (i == 0) {
-      div.className = "active-slide";
+      if (i == 0) {
+        div.className = "active-slide";
+      }
+
+      indicator.appendChild(div);
+    }
+  };
+
+  //to update the circle that is active
+  var updateCircleIndicator = function updateCircleIndicator() {
+    for (var i = 0; i < indicator.children.length; i++) {
+      indicator.children[i].classList.remove("active-slide");
     }
 
-    indicator.appendChild(div);
-  }
-}
+    indicator.children[index].classList.add("active-slide");
+  };
 
-circleIndicator();
+  var prevSlide = function prevSlide() {
+    if (index == 0) {
+      index = slides.length - 1;
+    } else {
+      index--;
+    }
 
-indicateSlide = function indicateSlide(element) {
-  console.log(element.id);
-  index = element.id;
-  changeSlide();
-  updateCircleIndicator();
-  resetTimer();
-}; //to update the circle that is active
+    changeSlide();
+  };
 
+  var nextSlide = function nextSlide() {
+    if (index == slides.length - 1) {
+      index = 0;
+    } else {
+      index++;
+    }
 
-function updateCircleIndicator() {
-  for (var i = 0; i < indicator.children.length; i++) {
-    indicator.children[i].classList.remove("active-slide");
-  }
+    changeSlide();
+  };
 
-  indicator.children[index].classList.add("active-slide");
-}
+  var changeSlide = function changeSlide() {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active-slide");
+    }
 
-function prevSlide() {
-  if (index == 0) {
-    index = slides.length - 1;
-  } else {
-    index--;
-  }
-
-  changeSlide();
-}
-
-function nextSlide() {
-  if (index == slides.length - 1) {
-    index = 0;
-  } else {
-    index++;
-  }
-
-  changeSlide();
-}
-
-function changeSlide() {
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active-slide");
-  }
-
-  slides[index].classList.add("active-slide");
-} //autoplay slides
+    slides[index].classList.add("active-slide");
+  }; //autoplay slides
 
 
-timer = setInterval(autoPlay, 6000);
+  var resetTimer = function resetTimer() {
+    //when click on the indicator or click button ->stop the timer
+    clearInterval(timer); //start the timer again
 
-function resetTimer() {
-  //when click on the indicator or click button ->stop the timer
-  clearInterval(timer); //start the timer again
+    timer = setInterval(autoPlay, 6000);
+  };
+
+  var autoPlay = function autoPlay() {
+    nextSlide();
+    updateCircleIndicator();
+  };
+
+  //slidershow script
+  slides = document.querySelector(".slider").children;
+  prev = document.querySelector(".prev");
+  next = document.querySelector(".next");
+  indicator = document.querySelector(".indicator");
+  index = 0;
+  prev.addEventListener("click", function () {
+    prevSlide();
+    updateCircleIndicator();
+    resetTimer();
+  });
+  next.addEventListener("click", function () {
+    nextSlide();
+    updateCircleIndicator();
+    resetTimer();
+  });
+  circleIndicator();
+
+  indicateSlide = function indicateSlide(element) {
+    console.log(element.id);
+    index = element.id;
+    changeSlide();
+    updateCircleIndicator();
+    resetTimer();
+  };
 
   timer = setInterval(autoPlay, 6000);
-}
-
-function autoPlay() {
-  nextSlide();
-  updateCircleIndicator();
 }
 
 /***/ }),
