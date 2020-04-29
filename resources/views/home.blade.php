@@ -49,9 +49,7 @@
 
         </div>
     </section>
-    <div class="d-flex justify-content-center">
-        <a href="#">add new article</a>
-    </div>
+
     <div id="home" class="container">
         <div class="row justify-content-center">
             <div class="py-4 col-md-8">
