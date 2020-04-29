@@ -2,7 +2,7 @@
     margin: 0;
     font-family:sans-serif ;
     box-sizing: border-box;
-    height: 100vh;
+    height: 92vh;
     overflow: hidden;
     position: relative;
 
@@ -11,7 +11,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        height: 80%;
+        height: 100%;
         background-size: cover;
         background-position: center;
         z-index: 1;
@@ -94,7 +94,7 @@
     & .indicator{
         position: absolute;
         left: 50%;
-        bottom: 12%;
+        bottom: 40px;
         z-index: 2;
         transform: translateX(-50%);
         div{
