@@ -79,14 +79,15 @@ class LoginController extends Controller
         if(auth()->attempt(array($fieldType => $input['username'], 'password' => $input['password'])))
 
         {
-         if (auth()->user()->username=='admin'){
+        $username=auth()->user()->username;
+         if ($username=='admin'){
 
         return redirect()->route('admin');;
         }
 
         else{
 
-        return redirect()->route('home');}
+        return redirect()->route('user',$username);}
 
         }
         else{
@@ -100,9 +101,16 @@ class LoginController extends Controller
 
 
     }
+    //function for redirecting from logout page to home page
      public function logout() {
           Auth::logout();
           return redirect('/home');
+        }
+
+    //function for redirect to user url home page
+        function route($name, $parameters = [], $absolute = true)
+        {
+            return app('url')->route($name, $parameters, $absolute);
         }
 }
 
