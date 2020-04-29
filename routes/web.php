@@ -32,4 +32,4 @@ Route::get('/article/show','ArticlesController@show');
 Route::get('/article/create','ArticlesController@create');
 
 //------------ end
-Route::get('/home/{user}', 'HomeController@user');
+Route::get('/home/admin', 'HomeController@admin')->name('admin');
