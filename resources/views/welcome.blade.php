@@ -33,5 +33,5 @@
     setTimeout(function () {
         window.location.href= 'home'; // the redirect goes here
 
-    },6000); // 5 seconds
+    },4000); // 5 seconds
 </script>
