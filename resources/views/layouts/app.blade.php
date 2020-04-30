@@ -45,7 +45,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo d-flex mr-auto">
-                <h1 class="text-light pr-sm-1"><a href="{{ url('/home') }}">HealthHub</a></h1>
+                <h1 class="text-light pr-sm-1"><a href="{{route('home') }}">HealthHub</a></h1>
 
                 <div><img src="{{asset('/images/redh_blues.png')}}"
                           alt="HealthHub logo"
@@ -57,12 +57,12 @@
 
             <nav class="nav-menu d-none d-lg-block ">
                 <ul>
-                    <li class="nav-item active"><a class="nav-link" href="{{ url('/home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#most_viewed">Most Viewed</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about_us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     @guest
                         <li class="nav-item drop-down">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -166,10 +166,13 @@
         @yield('content')
     </main>
     <!-- ======= Footer ======= -->
+    <div id="contact">
     <footer id="footer" class="fixed">
         <div class="container">
             <h3>HealthHub</h3>
-            <p>Your Only Place To Feel Healthy</p>
+            <p>Your Way For Better Life.</p>
+            <p>Feel free to contact with us via E-mail: <b>health-hub@hotmail.com</b></p>
+            <p>via Social Media:</p>
             <div class="social-links">
                 <a href="http://www.twitter.com/heathhub" class="twitter"><i class="fa fa-twitter"></i></a>
                 <a href="http://www.facebook.com/heathhub" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -182,6 +185,7 @@
             </div>
         </div>
     </footer>
+    </div>
     <!-- End Footer -->
 </div>
 {{--end app--}}
