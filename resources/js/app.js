@@ -31,6 +31,7 @@ const app = new Vue({
     el: '#app',
 });
 
+// let the code inside this if run only if the url has home in it
 let tab = window.location.href.indexOf('home');
 if(tab !== -1) {
 
@@ -137,6 +138,7 @@ if(tab !== -1) {
         nextSlide();
         updateCircleIndicator();
 
+    }
 }
 //scroll in the same page script
 // The speed of the scroll in milliseconds

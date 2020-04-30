@@ -49799,10 +49799,11 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app'
-});
+}); // let the code inside this if run only if the url has home in it
+
 var tab = window.location.href.indexOf('home');
 
-if (tab != -1) {
+if (tab !== -1) {
   // ----create circle indicator----
   var circleIndicator = function circleIndicator() {
     for (var i = 0; i < slides.length; i++) {
@@ -49896,7 +49897,24 @@ if (tab != -1) {
   };
 
   timer = setInterval(autoPlay, 6000);
-}
+} //scroll in the same page script
+// The speed of the scroll in milliseconds
+
+
+var speed = 1700;
+$('a[href*="#"]').filter(function (i, a) {
+  return a.getAttribute('href').startsWith('#') || a.href.startsWith("".concat(location.href, "#"));
+}).unbind('click.smoothScroll').bind('click.smoothScroll', function (event) {
+  var targetId = event.currentTarget.getAttribute('href').split('#')[1];
+  var targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(targetElement).offset().top
+    }, speed);
+  }
+});
 
 /***/ }),
 

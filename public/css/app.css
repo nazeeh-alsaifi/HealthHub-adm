@@ -10892,6 +10892,8 @@ a.text-dark:focus {
   transition: all 0.5s;
   z-index: 997;
   background: #3D3F4B;
+  position: fixed;
+  width: 100%;
 }
 
 #header .header-transparent {
@@ -11578,7 +11580,7 @@ article {
   margin: 0;
   font-family: sans-serif;
   box-sizing: border-box;
-  height: 92vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
