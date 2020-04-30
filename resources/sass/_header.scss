@@ -7,6 +7,10 @@
     transition: all 0.5s;
     z-index: 997;
     background: #3D3F4B;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     & .header-transparent {
         background: transparent;
