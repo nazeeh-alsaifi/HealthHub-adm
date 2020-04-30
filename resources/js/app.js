@@ -31,8 +31,8 @@ const app = new Vue({
     el: '#app',
 });
 
-let tab = window.location.href.indexOf('home')
-if(tab != -1) {
+let tab = window.location.href.indexOf('home');
+if(tab !== -1) {
 
 
 //slidershow script
