@@ -39,5 +39,5 @@ Route::get('/home/{username}', 'HomeController@user')->name('user');
 
 //-------------- Messages Controller Routes-----------
 Route::get('/message/create','MessagesController@create');
-Route::post('/consult','ConsultsController@store');
+Route::post('/message','MessagesController@store');
 //-----------------end
