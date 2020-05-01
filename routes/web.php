@@ -27,8 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 //-------- Articles Controller Routes-----------
-Route::get('home/article/{username}','ArticlesController@show')->name('show');
-Route::get('home/article','ArticlesController@show');//{articale_id}
+Route::get('/article/show','ArticlesController@show');
 //Route::get('/article/show/{title}','ArticlesController@show',function($title){});
 Route::get('admin/article/create','ArticlesController@create')->name('create');
 
@@ -38,3 +37,7 @@ Route::get('admin/article/create','ArticlesController@create')->name('create');
 Route::get('/home/{username}', 'HomeController@user')->name('user');
 //------------ end
 
+//-------------- Messages Controller Routes-----------
+Route::get('/message/create','MessagesController@create');
+Route::post('/consult','ConsultsController@store');
+//-----------------end
