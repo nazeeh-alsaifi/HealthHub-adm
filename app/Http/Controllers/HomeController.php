@@ -26,13 +26,16 @@ class HomeController extends Controller
         return view('home');
     }
     // users methods
-     public function admin()
+    public function user($username)
         {
-        return view('admin');
-        }
-        public function user()
-        {
-        return view('/home');
+        if ($username=='admin'){
+
+          return view('admin',compact('username'));}
+
+        else{
+
+          return view('home',compact('username'));
         }
     //-------------end
+    }
 }
