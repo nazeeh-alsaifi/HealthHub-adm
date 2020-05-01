@@ -27,14 +27,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 //-------- Articles Controller Routes-----------
-Route::get('/article/show','ArticlesController@show');
+Route::get('home/{username}/article','ArticlesController@show')->name('show');//{articale_id}
 //Route::get('/article/show/{title}','ArticlesController@show',function($title){});
-Route::get('/article/create','ArticlesController@create');
+Route::get('admin/article/create','ArticlesController@create')->name('create');
 
 //------------ end
 
 //users routes
-Route::get('/home/admin', 'HomeController@admin')->name('admin');
-
-Route::get('/home/user/{username}', 'HomeController@user')->name('user');
+Route::get('/home/{username}', 'HomeController@user')->name('user');
 //------------ end
+
