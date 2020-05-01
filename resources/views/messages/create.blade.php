@@ -26,13 +26,13 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="content"
+                                <label for="body"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
 
                                 <div class="col-md-6">
-                                    <textarea id="content"  class="form-control @error('content') is-invalid @enderror" name="content" required></textarea>
+                                    <textarea id="body"  class="form-control @error('body') is-invalid @enderror" name="body" required></textarea>
 
-                                    @error('content')
+                                    @error('body')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
