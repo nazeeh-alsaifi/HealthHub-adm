@@ -80,16 +80,8 @@ class LoginController extends Controller
 
         {
         $username=auth()->user()->username;
-         if ($username=='admin'){
-
-        return redirect()->route('admin');;
-        }
-
-        else{
-
         return redirect()->route('user',$username);}
 
-        }
         else{
 
             return redirect()->route('login')
@@ -101,16 +93,9 @@ class LoginController extends Controller
 
 
     }
-    //function for redirecting from logout page to home page
      public function logout() {
           Auth::logout();
-          return redirect('/home');
-        }
-
-    //function for redirect to user url home page
-        function route($name, $parameters = [], $absolute = true)
-        {
-            return app('url')->route($name, $parameters, $absolute);
+          return redirect()->route('home');
         }
 }
 
