@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -10,8 +10,7 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
       public function show(){
-      //$title="hello there";
-      //return view('articles.show',compact('title'));
             return view('articles.show');
+            //return view('articles.show',$article_id);
         }
 }
