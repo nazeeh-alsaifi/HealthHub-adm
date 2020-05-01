@@ -45,7 +45,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo d-flex mr-auto">
-                <h1 class="text-light pr-sm-1"><a href="">HealthHub</a></h1>
+                <h1 class="text-light pr-sm-1"><a href="{{route('home') }}">HealthHub</a></h1>
 
                 <div><img src="{{asset('/images/redh_blues.png')}}"
                           alt="HealthHub logo"

@@ -17,19 +17,21 @@ class MessagesController extends Controller
         return view('messages.create');
     }
 
-    public function store(Request $request){
-        dd($request);
-//        $data = $request->validate([
-//            'content' => ['required','string','min:10'],
-//            'captcha' => ['required','captcha'],
-//        ]);
-//        $user= auth()->user();
-//        $user->consults()->create([
-//            'content' => $data['content'],
-//            'sent_by' => $user->username,
-//            'received_by' => 'admin1'
-//        ]);
-//        return redirect('/home');
+    public function sendMessage(){
+        $data = request()->validate([
+            'subject' => ['required','string'],
+            'body' => ['required','string','min:10'],
+            'captcha' => ['required','captcha'],
+        ]);
+
+        auth()->user()->sent()->create([
+            'subject' => $data['subject'],
+            'body' => $data['body'],
+            'received_by' => 1,
+            'status' => 1,
+        ]);
+
+        return redirect('/home');
 
 
     }

@@ -38,6 +38,6 @@ Route::get('/home/{username}', 'HomeController@user')->name('user');
 //------------ end
 
 //-------------- Messages Controller Routes-----------
-Route::get('/message/create','MessagesController@create');
-Route::post('/message','MessagesController@store');
+Route::get('/message/create','MessagesController@create')->name('message_create');
+Route::post('/message','MessagesController@sendMessage');
 //-----------------end
