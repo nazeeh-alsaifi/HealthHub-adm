@@ -14,7 +14,7 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="subject" type="text" class="form-control " name="subject" value="{{ $subject }}" disabled autofocus>
+                                    <input id="subject" type="text" class="form-control " name="subject" value="{{ $subject }}" readonly autofocus>
                                 </div>
                             </div>
 
@@ -33,6 +33,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <input name="id" type="hidden" value={{$id}}>
 
 

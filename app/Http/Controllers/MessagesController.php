@@ -25,7 +25,12 @@ class MessagesController extends Controller
     public function sendMessage($recipient = 1)
     {
         dd(request()->all());
-        if (auth()->user()->username == 'admin') {
+        if ($recipient != 1) {
+            $data = request()->validate([
+                'subject' => ['required', 'string'],
+                'body' => ['required', 'string', 'min:10'],
+            ]);
+            auth()->user()->sendMessageTo($data['id'], $data['subject'], $data['body'], 1);
 
         } else {
             $data = request()->validate([
