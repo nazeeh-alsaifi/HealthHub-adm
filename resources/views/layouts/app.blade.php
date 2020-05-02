@@ -45,7 +45,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo d-flex mr-auto">
-                <h1 class="text-light pr-sm-1"><a href="{{route('home') }}">HealthHub</a></h1>
+                <h1 class="text-light pr-sm-1"><a href="{{route('user',Auth::user()->username ?? '')}}">HealthHub</a></h1>
 
                 <div><img src="{{asset('/images/redh_blues.png')}}"
                           alt="HealthHub logo"
@@ -62,8 +62,14 @@
                     <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username ?? '')}}#articles">Articles</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username ?? '')}}#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username ?? '')}}#about_us">About Us</a></li>
+
+                    @if(Auth::user() == null)
+                    <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Consult A Doctor</a></li>
+                    @else
+                        <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username)}}#consult">Consult A Doctor</a></li>
+                    @endif
+
                 @guest
-                        <li class="nav-item"><a class="nav-link" href="{{url('/message/create')}}">Consult A Doctor</a></li>
 
                         <li class="nav-item drop-down">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -77,9 +83,6 @@
                                 @endif
                             </ul>
                     @else
-                        @if(!(Auth::user()->username == 'admin'))
-                            <li class="nav-item"><a class="nav-link" href="{{route('message_create')}}">Consult A Doctor</a></li>
-                        @endif
                             <li class="nav-item drop-down">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -166,9 +169,11 @@
             </div>
         </nav>
     --}}
+
     <main>
         @yield('content')
     </main>
+
     <!-- ======= Footer ======= -->
     <div id="contact">
     <footer id="footer" class="fixed">
