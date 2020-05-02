@@ -24,7 +24,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('logout', 'Auth\LoginController@logout');
 
 //-------- Articles Controller Routes-----------
 Route::get('home/article/{username}','ArticlesController@show')->name('show');
@@ -39,7 +39,7 @@ Route::get('/home/{username}', 'HomeController@user')->name('user');
 //------------ end
 
 //-------------- Messages Controller Routes-----------
-Route::get('/message/create','MessagesController@userCreate')->name('message_create');
+//Route::get('/message/create','MessagesController@userCreate')->name('message_create');
 Route::post('/message','MessagesController@sendMessage');
 Route::get('/reply/{id}/{subject}','MessagesController@adminCreate')->name('reply_create');
 //-----------------end
