@@ -12,24 +12,31 @@ class MessagesController extends Controller
         $this->middleware('auth');
     }
 
+    public function adminCreate($id,$subject)
+    {
+        return view('messages.admin-create', ['id' => $id, 'subject' => $subject]);
+    }
 
-    public function create(){
+    public function userCreate()
+    {
         return view('messages.create');
     }
 
-    public function sendMessage(){
-        $data = request()->validate([
-            'subject' => ['required','string'],
-            'body' => ['required','string','min:10'],
-            'captcha' => ['required','captcha'],
-        ]);
+    public function sendMessage($recipient = 1)
+    {
+        dd(request()->all());
+        if (auth()->user()->username == 'admin') {
 
-        auth()->user()->sent()->create([
-            'subject' => $data['subject'],
-            'body' => $data['body'],
-            'received_by' => 1,
-            'status' => 1,
-        ]);
+        } else {
+            $data = request()->validate([
+                'subject' => ['required', 'string'],
+                'body' => ['required', 'string', 'min:10'],
+                'captcha' => ['required', 'captcha'],
+            ]);
+
+            auth()->user()->sendMessageTo(1, $data['subject'], $data['body'], 1);
+        }
+
 
         return redirect('/home');
 
