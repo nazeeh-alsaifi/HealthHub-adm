@@ -65,7 +65,7 @@
                                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{route('show',$username)}}">Article One</a>
+                                            <a href="{{route('show',$username ?? '')}}">Article One</a>
                                         </h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             Amet
@@ -81,7 +81,7 @@
                                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{route('show',$username)}}">Article Two</a>
+                                            <a href="{{route('show',$username ?? '')}}">Article Two</a>
                                         </h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Nam
@@ -94,7 +94,7 @@
                                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{route('show',$username)}}">Article Three</a>
+                                            <a href="{{route('show',$username ?? '')}}">Article Three</a>
                                         </h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             Quos
@@ -110,7 +110,7 @@
                                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{route('show',$username)}}">Article Four</a>
+                                            <a href="{{route('show',$username ?? '')}}">Article Four</a>
                                         </h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Nam
@@ -123,7 +123,7 @@
                                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{route('show',$username)}}">Article Five</a>
+                                            <a href="{{route('show',$username ?? '')}}">Article Five</a>
                                         </h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Nam
@@ -136,7 +136,7 @@
                                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{route('show',$username)}}">Article Six</a>
+                                            <a href="{{route('show',$username ?? '')}}">Article Six</a>
                                         </h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo,
