@@ -44,4 +44,13 @@ class User extends Authenticatable
     public function receive(){
         return $this->hasMany(Message::class,'received_by');
     }
+
+    public function sendMessageTo($recipient, $subject, $body, $status){
+        return $this->sent()->create([
+            'subject' => $subject,
+            'body' => $body,
+            'received_by' => $recipient,
+            'status' => $status,
+        ]);
+    }
 }
