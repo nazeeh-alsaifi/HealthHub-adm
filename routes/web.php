@@ -27,7 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 //-------- Articles Controller Routes-----------
-Route::get('/article/show','ArticlesController@show');
+Route::get('home/article/{username}','ArticlesController@show')->name('show');
+Route::get('home/article','ArticlesController@show');//{articale_id}
 //Route::get('/article/show/{title}','ArticlesController@show',function($title){});
 Route::get('admin/article/create','ArticlesController@create')->name('create');
 
