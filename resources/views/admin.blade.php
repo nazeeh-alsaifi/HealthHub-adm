@@ -96,138 +96,34 @@
                 <div class="card">
                     <div class="card-header">Users Consultations</div>
                     <div class="row">
-                        @foreach( App\Message::all() as $message)
-                            <div class="col-lg-12 col-sm-12 mb-2 mt-2">
-                                <div class="smaller-card card h-100">
-                                    <div class="card-body">
-                                        <h4 class="card-title">
-                                            <a class="btn btn-primary" data-toggle="collapse" href="#par" role="button">Toggle
-                                                first element</a>
-                                        </h4>
-                                        <p id="par" class="card-text collapse">{{$message->body}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <div class="py-4 col-md-8">
-                <div class="card">
-                    <div class="card-header">Users Consultations</div>
-                    <div class="row">
-                        <div class="col-lg-12 col-sm-12 mb-2 mt-2">
-                            <table class="table table-hover">
-                                <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">Created At</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach( App\Message::all() as $message)
-                                    <a data-toggle="collapse" href="#par" role="button">
-                                        <tr>
-                                            <td>{{$message->id}}</td>
-                                            <td>{{$message->subject}}</td>
-                                            <td>{{$message->created_at}}</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                    </a>
-                                    <tr id="body" class="collapse">
-                                        <td>{{$message->id}}</td>
-                                        <td>{{$message->subject}}</td>
-                                        <td>{{$message->created_at}}</td>
-                                        <td>{{ $message->sender->name}}</td>
-                                    </tr>
-                                @endforeach
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="py-4 col-md-8">
-                <div class="card">
-                    <div class="card-header">Users Consultations</div>
-                    <div class="row">
                         <div class="col-lg-12 col-sm-12 mb-2 mt-2">
                             <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
+                                <table class="table table-hover">
+                                    <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Heading</th>
-                                        <th scope="col">Heading</th>
-                                        <th scope="col">Heading</th>
+                                        <th scope="col">Subject</th>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Created At</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse"
-                                        data-parent="#accordion1" href="#collapseOne">
-                                        <td class="expand-button"></td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-
-                                    </tr>
-                                    <tr class="hide-table-padding">
-                                        <td></td>
-                                        <td colspan="3">
-                                            <div id="collapseOne" class="collapse in p-3">
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value 1</div>
+                                    @foreach( App\Message::all() as $message)
+                                        <tr class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse"
+                                            data-parent="#accordion1" href="#{{'collapse'. $message->id}}">
+                                            <td class="expand-button"></td>
+                                            <td>{{$message->subject}}</td>
+                                            <td>{{ $message->sender->name}}</td>
+                                            <td>{{$message->created_at}}</td>
+                                        </tr>
+                                        <tr class="hide-table-padding">
+                                            <td colspan="4">
+                                                <div id="{{'collapse'. $message->id}}" class="collapse in p-3">
+                                                    {{$message->body}}
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value 2</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value 3</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value 4</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="accordion-toggle collapsed" id="accordion2" data-toggle="collapse"
-                                        data-parent="#accordion2" href="#collapseTwo">
-                                        <td class="expand-button"></td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-
-                                    </tr>
-                                    <tr class="hide-table-padding">
-                                        <td></td>
-                                        <td colspan="4">
-                                            <div id="collapseTwo" class="collapse in p-3">
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-2">label</div>
-                                                    <div class="col-6">value</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

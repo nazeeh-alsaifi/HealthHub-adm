@@ -62,8 +62,9 @@
                     <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username ?? '')}}#articles">Articles</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username ?? '')}}#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('user',Auth::user()->username ?? '')}}#about_us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/message/create')}}">Consult A Doctor</a></li>
                 @guest
+                        <li class="nav-item"><a class="nav-link" href="{{url('/message/create')}}">Consult A Doctor</a></li>
+
                         <li class="nav-item drop-down">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -76,7 +77,10 @@
                                 @endif
                             </ul>
                     @else
-                        <li class="nav-item drop-down">
+                        @if(!(Auth::user()->username == 'admin'))
+                            <li class="nav-item"><a class="nav-link" href="{{route('message_create')}}">Consult A Doctor</a></li>
+                        @endif
+                            <li class="nav-item drop-down">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
