@@ -105,6 +105,8 @@
                                         <th scope="col">Subject</th>
                                         <th scope="col">User</th>
                                         <th scope="col">Created At</th>
+                                        <th scope="col"></th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -115,6 +117,7 @@
                                             <td>{{$message->subject}}</td>
                                             <td>{{ $message->sender->name}}</td>
                                             <td>{{$message->created_at}}</td>
+                                            <td><a href="{{url('reply/'.$message->sent_by.'/'.$message->subject)}}">reply</a></td>
                                         </tr>
                                         <tr class="hide-table-padding">
                                             <td colspan="4">
