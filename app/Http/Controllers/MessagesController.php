@@ -24,7 +24,6 @@ class MessagesController extends Controller
 
     public function sendMessage()
     {
-        $username = auth()->user()->username;
 
         if (request()->hasAny('id')) {
             $data = request()->validate([
@@ -44,7 +43,7 @@ class MessagesController extends Controller
         }
 
 
-        return redirect()->route('user', $username);
+        return redirect()->route('user', auth()->user()->username);
 
 
     }
