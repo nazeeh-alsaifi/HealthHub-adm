@@ -247,7 +247,7 @@
                                         <td>{{ $message->sender->name}}</td>
                                         <td>{{$message->created_at}}</td>
                                         <td>
-                                            <a href="{{url('reply/'.$message->sent_by.'/'.$message->subject)}}">Reply</a>
+                                            <a href="{{url('reply/'.$message->sent_by.'/'.$message->id)}}">Reply</a>
                                         <td><a class="accordion-toggle collapsed" id="accordion1"
                                                data-toggle="collapse"
                                                data-parent="#accordion1" href="#{{'collapse'. $message->id}}">

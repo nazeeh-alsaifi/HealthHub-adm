@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="py-4 col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Write Your Reply'). ' To ' .App\User::find($id)->name  }}</div>
+                    <div class="card-header">{{ __('Write Your Reply') . ' To ' . App\User::find($sentBy)->name  }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ url('/message')}}" enctype="multipart/form-data">
@@ -14,9 +14,10 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="subject" type="text" class="form-control " name="subject" value="{{ $subject }}" readonly autofocus>
+                                    <input id="subject" type="text" class="form-control " name="subject" value="{{ App\Message::find($messageId)->subject }}" readonly autofocus>
                                 </div>
                             </div>
+
 
                             <div class="form-group row">
                                 <label for="body"
@@ -34,7 +35,8 @@
                                 </div>
                             </div>
 
-                            <input name="id" type="hidden" value={{$id}}>
+                            <input name="id" type="hidden" value={{$sentBy}}>
+                            <input name="reply_on" type="hidden" value={{$messageId}}>
 
 
 
