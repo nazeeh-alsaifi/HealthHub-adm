@@ -51,8 +51,8 @@
             </div>
         </section>
     </div>
-    <div id="articles" style="padding: 30px">
         <div id="home" class="container">
+            <div id="articles" style="padding: 30px">
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8">
 
@@ -152,30 +152,28 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="services" style="padding: 30px;">
-        <div id="home" class="container">
-            <div class="py-4 col-md-8">
-
-                <div class="card">
+    <div id="services" style="padding: 30px">
+            <div class="row justify-content-center">
+                <div class="py-4 col-md-8">
+                    <div class="card">
                     <div class="card-header">services</div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <div id="about_us" style="padding: 30px">
-        <div id="home" class="container">
-            <div class="py-4 col-md-8">
-
-                <div class="card">
+            <div class="row justify-content-center">
+                <div class="py-4 col-md-8">
+                    <div class="card">
                     <div class="card-header">About Us</div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     @if(!(Auth::user() == null))
-        <div id="consult">
-            <div id="consults-create" class="container" style="padding: 12vh;">
+        <div id="consult" class="container" style="padding: 30px">
                 <div class="row justify-content-center">
                     <div class="py-4 col-md-8">
                         <div class="card">
@@ -193,7 +191,7 @@
                                             <input id="subject" type="text"
                                                    class="form-control @error('subject') is-invalid @enderror"
                                                    name="subject" value="{{ old('subject') }}" required
-                                                   autocomplete="subject" autofocus>
+                                                   autocomplete="subject">
 
                                             @error('subject')
                                             <span class="invalid-feedback" role="alert">
