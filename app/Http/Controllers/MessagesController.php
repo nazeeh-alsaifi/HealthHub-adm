@@ -22,13 +22,13 @@ class MessagesController extends Controller
         return view('messages.create');
     }
 
-    public function sendMessage($recipient = 1)
+    public function sendMessage()
     {
-        dd(request()->all());
-        if ($recipient != 1) {
+        if (request()->hasAny('id')) {
             $data = request()->validate([
                 'subject' => ['required', 'string'],
                 'body' => ['required', 'string', 'min:10'],
+                'id' => ['required']
             ]);
             auth()->user()->sendMessageTo($data['id'], $data['subject'], $data['body'], 1);
 
