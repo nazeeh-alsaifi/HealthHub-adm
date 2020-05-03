@@ -30,7 +30,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('home/article/{username}','ArticlesController@show')->name('show');
 Route::get('home/article','ArticlesController@show');//{articale_id}
 //Route::get('/article/show/{title}','ArticlesController@show',function($title){});
-Route::get('admin/article/create','ArticlesController@create')->name('create');
+Route::get('admin/article/create','ArticlesController@create')->name('article_create');
 
 //------------ end
 
@@ -39,7 +39,7 @@ Route::get('/home/{username}', 'HomeController@user')->name('user');
 //------------ end
 
 //-------------- Messages Controller Routes-----------
-//Route::get('/message/create','MessagesController@userCreate')->name('message_create');
+Route::get('/message/create','MessagesController@userCreate')->name('message_create');
 Route::post('/message','MessagesController@sendMessage');
 Route::get('/reply/{id}/{subject}','MessagesController@adminCreate')->name('reply_create');
 //-----------------end
