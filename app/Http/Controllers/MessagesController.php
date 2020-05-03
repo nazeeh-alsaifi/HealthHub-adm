@@ -12,7 +12,7 @@ class MessagesController extends Controller
         $this->middleware('auth');
     }
 
-    public function adminCreate($id,$subject)
+    public function adminCreate($id, $subject)
     {
         return view('messages.admin-create', ['id' => $id, 'subject' => $subject]);
     }
@@ -24,7 +24,8 @@ class MessagesController extends Controller
 
     public function sendMessage()
     {
-     $username=auth()->user()->username;
+        $username = auth()->user()->username;
+
         if (request()->hasAny('id')) {
             $data = request()->validate([
                 'subject' => ['required', 'string'],
@@ -32,7 +33,6 @@ class MessagesController extends Controller
                 'id' => ['required']
             ]);
             auth()->user()->sendMessageTo($data['id'], $data['subject'], $data['body'], 1);
-
         } else {
             $data = request()->validate([
                 'subject' => ['required', 'string'],
@@ -44,7 +44,7 @@ class MessagesController extends Controller
         }
 
 
-        return redirect()->route('user',$username);
+        return redirect()->route('user', $username);
 
 
     }

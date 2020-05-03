@@ -238,7 +238,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach( App\Message::all() as $message)
+                                @foreach( Auth::User()->receive as $message)
                                     <tr class="accordion-toggle collapsed" id="accordion1"
                                         data-toggle="collapse"
                                         data-parent="#accordion1" href="#{{'collapse'. $message->id}}">
