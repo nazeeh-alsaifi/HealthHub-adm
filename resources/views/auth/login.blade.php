@@ -18,7 +18,7 @@
 
                                 <div class="col-md-6">
 
-                                    <input id="username" type="username"
+                                    <input id="username" type="text"
                                            class="form-control @error('username') is-invalid @enderror" name="username"
                                            value="{{ old('username') }}" required autofocus>
 
