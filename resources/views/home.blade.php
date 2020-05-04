@@ -257,61 +257,62 @@
         <div id="admin-replies" style="padding: 30px">
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8">
-                    <div class="card-header">My Conultations</div>
-                    <div class="row">
-                        <div class="col-lg-12 col-sm-12 mb-2 mt-2">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="thead-dark ">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Subject</th>
-                                        <th scope="col">User</th>
-                                        <th scope="col">Created At</th>
-                                        <th scope="col"></th>
+                    <div class="card ">
+                        <div class="card-header text-center">My Conultations</div>
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 mb-2 ">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Subject</th>
+                                            <th scope="col">User</th>
+                                            <th scope="col">Created At</th>
+                                            <th scope="col"></th>
 
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach( Auth::User()->sent as $message)
-                                        <tr class="accordion-toggle collapsed" id="accordion1">
-                                            <td class="expand-button" data-toggle="collapse"
-                                                href="#{{'collapse'. $message->id}}"></td>
-                                            <td>{{$message->subject}}</td>
-                                            <td>{{ $message->sender->name}}</td>
-                                            <td>{{$message->created_at}}</td>
-                                            @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                <td><p id="reply-link" data-toggle="collapse" href="#{{'reply'. $message->id}}">View
-                                                        Reply</p></td>
-                                            @endif
                                         </tr>
-                                        <tr class="hide-table-padding">
-                                            <td colspan="4">
-                                                <div id="{{'collapse'. $message->id}}" class="collapse in p-3">
-                                                    {{$message->body}}
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach( Auth::User()->sent as $message)
+                                            <tr class="accordion-toggle collapsed" id="accordion1">
+                                                <td class="expand-button" data-toggle="collapse"
+                                                    href="#{{'collapse'. $message->id}}"></td>
+                                                <td>{{$message->subject}}</td>
+                                                <td>{{ $message->sender->name}}</td>
+                                                <td>{{$message->created_at}}</td>
+                                                @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
+                                                    <td><a id="reply-link" data-toggle="collapse"
+                                                           href="#{{'reply'. $message->id}}">View Reply</a></td>
+                                                @endif
+                                            </tr>
+                                            <tr class="hide-table-padding">
+                                                <td colspan="5">
+                                                    <div id="{{'collapse'. $message->id}}" class="collapse in p-3">
+                                                        {{$message->body}}
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                        <tr class="hide-table-padding">
-                                            <td colspan="4">
-                                                <div id="{{'reply'. $message->id}}" class="collapse in p-3">
-                                                    @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                        {{'Admin:'. Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
-                                                    @endif
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
+                                            <tr class="hide-table-padding">
+                                                <td colspan="5">
+                                                    <div id="{{'reply'. $message->id}}" class="collapse in p-3">
+                                                        @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
+                                                            {{'Admin:'. Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
+                                                        @endif
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     @endif
 @endsection
 
