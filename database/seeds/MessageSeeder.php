@@ -56,6 +56,26 @@ class MessageSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+        DB::table('messages')->insert([
+            'sent_by' => 2,
+            'received_by' => 1,
+            'subject' => 'headache',
+            'body' => 'hey doc, i had a severe headache when i am not having enough sleep  :{',
+            'status' => '1',
+            'reply_on' => '',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
 
+        DB::table('messages')->insert([
+            'sent_by' => 2,
+            'received_by' => 1,
+            'subject' => 'blood test',
+            'body' => "hey doc, i'm going to have a blood test",
+            'status' => '1',
+            'reply_on' => '',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }
