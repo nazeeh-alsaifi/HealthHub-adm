@@ -281,7 +281,7 @@
                                             <td>{{ $message->sender->name}}</td>
                                             <td>{{$message->created_at}}</td>
                                             @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                <td><p id="reply-link" data-toggle="collapse" href="#test">View
+                                                <td><p id="reply-link" data-toggle="collapse" href="#{{'reply'. $message->id}}">View
                                                         Reply</p></td>
                                             @endif
                                         </tr>
@@ -295,11 +295,10 @@
 
                                         <tr class="hide-table-padding">
                                             <td colspan="4">
-                                                <div id="test" class="collapse in p-3">
+                                                <div id="{{'reply'. $message->id}}" class="collapse in p-3">
                                                     @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                        {{Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
+                                                        {{'Admin:'. Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
                                                     @endif
-
                                                 </div>
                                             </td>
                                         </tr>

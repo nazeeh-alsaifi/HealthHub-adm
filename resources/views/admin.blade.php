@@ -25,8 +25,16 @@
                                             dolorem!</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -42,8 +50,16 @@
                                             viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -60,8 +76,16 @@
                                             viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -79,7 +103,11 @@
                     <div class="card">
 
                         <div class="card-header">Articles
-                            <a href="{{route('article_create')}}"><button type="button" class="btn btn-primary" style="border-color:rosybrown;float:right;border-radius: 12px;background-color: rosybrown;" onclick="{{route('article_create')}};">Add new article</button>
+                            <a href="{{route('article_create')}}">
+                                <button type="button" class="btn btn-primary"
+                                        style="border-color:rosybrown;float:right;border-radius: 12px;background-color: rosybrown;"
+                                        onclick="{{route('article_create')}};">Add new article
+                                </button>
                             </a>
                         </div>
 
@@ -99,8 +127,16 @@
                                             dolorem!</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -116,8 +152,16 @@
                                             viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -136,8 +180,16 @@
                                             quam!</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -153,8 +205,16 @@
                                             viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -170,8 +230,16 @@
                                             viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -189,8 +257,16 @@
                                             esse.</p>
                                     </div>
                                     <tr>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: midnightblue">Edit</button></td>
-                                        <td><button type="button" class="btn btn-primary" style="background-color: darkred">Delete</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: midnightblue">Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                    style="background-color: darkred">Delete
+                                            </button>
+                                        </td>
                                     </tr>
                                 </div>
                             </div>
@@ -239,24 +315,33 @@
                                 </thead>
                                 <tbody>
                                 @foreach( Auth::User()->receive as $message)
-                                    <tr class="accordion-toggle collapsed" id="accordion1"
-                                        data-toggle="collapse"
-                                        data-parent="#accordion1" href="#{{'collapse'. $message->id}}">
-                                        <td class="expand-button"></td>
+                                    <tr class="accordion-toggle collapsed" id="accordion1">
+                                        <td class="expand-button" data-toggle="collapse"
+                                            href="#{{'collapse'. $message->id}}"></td>
                                         <td>{{$message->subject}}</td>
                                         <td>{{ $message->sender->name}}</td>
                                         <td>{{$message->created_at}}</td>
-                                        <td>
-                                            <a href="{{url('reply/'.$message->sent_by.'/'.$message->id)}}">Reply</a>
-                                        <td><a class="accordion-toggle collapsed" id="accordion1"
-                                               data-toggle="collapse"
-                                               data-parent="#accordion1" href="#{{'collapse'. $message->id}}">
-                                                View latest Reply</a></td>
+                                        @if((Auth::User()->sent->where('reply_on',$message->id)->first()) != null)
+                                            <td><p id="reply-link" data-toggle="collapse" href="#{{'reply'. $message->id}}">View
+                                                    Reply</p></td>
+                                        @else
+                                            <td><a href="{{url('reply/'.$message->sent_by.'/'.$message->id)}}">Reply</a>
+                                        @endif
+
                                     </tr>
                                     <tr class="hide-table-padding">
                                         <td colspan="4">
                                             <div id="{{'collapse'. $message->id}}" class="collapse in p-3">
                                                 {{$message->body}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-table-padding">
+                                        <td colspan="4">
+                                            <div id="{{'reply'. $message->id}}" class="collapse in p-3">
+                                                @if((Auth::User()->sent->where('reply_on',$message->id)->first()) != null)
+                                                    {{'Admin:'. Auth::User()->sent->where('reply_on',$message->id)->first()->body}}
+                                                @endif
                                             </div>
                                         </td>
                                     </tr>
