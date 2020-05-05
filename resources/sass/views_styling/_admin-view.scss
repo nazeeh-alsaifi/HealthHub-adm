@@ -6,21 +6,20 @@ tr.hide-table-padding td {
     position: relative;
 }
 
-.accordion-toggle .expand-button:after
-{
+.accordion-toggle .expand-button:after {
     position: absolute;
-    left:.75rem;
+    left: .75rem;
     top: 50%;
     transform: translate(0, -50%);
     content: '-';
 }
-.accordion-toggle.collapsed .expand-button:after
-{
+
+.accordion-toggle.collapsed .expand-button:after {
     content: '+';
 }
 
 
-#users_consultations{
+#users_consultations {
     thead {
         background: #BDBFCA;
     }

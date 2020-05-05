@@ -10888,9 +10888,6 @@ a.text-dark:focus {
 */
 
 #header {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   height: 8vh;
   transition: all 0.5s;
   z-index: 997;

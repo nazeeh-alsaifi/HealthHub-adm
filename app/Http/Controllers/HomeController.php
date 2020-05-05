@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+
 class HomeController extends Controller
 {
     /**
@@ -29,16 +30,15 @@ class HomeController extends Controller
     // users methods
     public function user($username)
     {
-    $most_viewed=Article::orderBy('views','DESC')->get()->take(3);
-    //dd($most_viewed);
-    $articles = Article::orderBy('created_at','DESC')->get();
-    if ($username == 'admin') {
+        $most_viewed = Article::orderBy('views', 'DESC')->get()->take(3);
+        //dd($most_viewed);
+        $articles = Article::orderBy('created_at', 'DESC')->get();
+        if ($username == 'admin') {
 
-            return view('admin', compact('username'),['most_viewed' => $most_viewed,'articles' =>$articles]);
-           }
-    else {
+            return view('admin', compact('username'), ['most_viewed' => $most_viewed, 'articles' => $articles]);
+        } else {
 
-            return view::make('home',['most_viewed' => $most_viewed,'articles' =>$articles]);
+            return view('home', ['most_viewed' => $most_viewed, 'articles' => $articles]);
         }
         //-------------end
     }
