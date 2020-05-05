@@ -8,14 +8,14 @@
                     <div class="card-header">Create New Article</div>
 
                     <div class="card-body">
-                        <form method="" action="">
-
+                        <form method="post" action="{{route('article_store')}}" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group row" style="">
                                 <label for="title"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="image" type="file" class="form-control-file" name="image">
+                                    <input id="image" type="file" class="form-control-file @error('image') is-invalid @enderror" name="image"  value="{{old('image')}}">
                                     @error('image')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -31,7 +31,7 @@
                                 <div class="col-md-6">
                                     <input id="title" type="text"
                                            class="form-control @error('title') is-invalid @enderror" name="title"
-                                           value="{{ old('title') }}" required autocomplete="title" autofocus>
+                                           value="{{old('title')}}"  autocomplete="title">
 
                                     @error('title')
                                     <span class="invalid-feedback" role="alert">
@@ -48,8 +48,8 @@
                                 <div class="col-md-6">
                                     <input id="description" type="text"
                                            class="form-control @error('description') is-invalid @enderror"
-                                           name="description" value="{{ old('description') }}" required
-                                           autocomplete="description" autofocus>
+                                           name="description"
+                                           autocomplete="description" value="{{old('description')}}">
 
                                     @error('description')
                                     <span class="invalid-feedback" role="alert">
@@ -64,9 +64,9 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
 
                                 <div class="col-md-6">
-                                    <textarea id="article-content"  class="form-control" name="article-content" required></textarea>
+                                    <textarea id="content"  class="form-control @error('content') is-invalid @enderror" name="content" >{{old('content')}}</textarea>
 
-                                    @error('article-content')
+                                    @error('content')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
