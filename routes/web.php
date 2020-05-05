@@ -51,5 +51,5 @@ Route::get('/home/{username}', 'HomeController@user')->name('user');
 //-------------- Messages Controller Routes-----------
 Route::get('/message/create','MessagesController@userCreate')->name('message_create');
 Route::post('/message','MessagesController@sendMessage');
-Route::get('/reply/{id}/{subject}','MessagesController@adminCreate')->name('reply_create');
+Route::get('/reply/{sentBy}/{messageId}','MessagesController@adminCreate')->name('reply_create');
 //-----------------end

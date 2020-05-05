@@ -11785,6 +11785,10 @@ article {
   color: #3D3F4B;
 }
 
+#admin-replies thead {
+  background: #BDBFCA;
+}
+
 #articles-create {
   background-image: url("/images/bg1.jpg");
   max-width: 100%;
@@ -11809,6 +11813,10 @@ tr.hide-table-padding td {
 
 .accordion-toggle.collapsed .expand-button:after {
   content: "+";
+}
+
+#users_consultations thead {
+  background: #BDBFCA;
 }
 
 * {
