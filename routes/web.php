@@ -27,11 +27,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', 'Auth\LoginController@logout');
 
 //-------- Articles Controller Routes-----------
-Route::get('home/article/{username}','ArticlesController@show')->name('show');
-Route::get('home/article','ArticlesController@show');//{articale_id}
+
+//Route::get('article/{article_id}','ArticlesController@show');//{articale_id}
 //Route::get('/article/show/{title}','ArticlesController@show',function($title){});
+
 Route::get('admin/article/create','ArticlesController@create')->name('article_create');
 
+Route::post('admin/article','ArticlesController@store')->name('article_store');
+
+Route::get('admin/article/article_num={article_id}/edit','ArticlesController@edit')->name('article_edit');
+
+Route::patch('admin/article/article_num={article_id}','ArticlesController@update')->name('article_update');
+
+Route::delete('admin/article/article_num={article_id}','ArticlesController@delete')->name('article_delete');
+
+Route::get('home/article/{article_id}','ArticlesController@show')->name('article_show');
 //------------ end
 
 //users routes
