@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MessageSeeder extends Seeder
 {
@@ -18,6 +19,9 @@ class MessageSeeder extends Seeder
             'received_by' => 1,
             'subject' => 'heart disease',
             'body' => 'hey doc, i had a severe heart attack when my girlfriend broke up with me KEKW :D',
+            'phone_num' => '134134',
+            'age' => 25,
+            'sex' => 'male',
             'status' => '1',
             'reply_on' => '',
             'created_at' => now(),
@@ -29,6 +33,9 @@ class MessageSeeder extends Seeder
             'received_by' => 1,
             'subject' => 'heart attack incoming',
             'body' => "hey doc, i think i'm going to have a severe heart attack if my grandmother shouted at me KEKW :D",
+            'phone_num' => '567567',
+            'age' => 24,
+            'sex' => 'male',
             'status' => '1',
             'reply_on' => '',
             'created_at' => now(),
@@ -61,6 +68,9 @@ class MessageSeeder extends Seeder
             'received_by' => 1,
             'subject' => 'headache',
             'body' => 'hey doc, i had a severe headache when i am not having enough sleep  :{',
+            'phone_num' => '567567',
+            'age' => 24,
+            'sex' => 'male',
             'status' => '1',
             'reply_on' => '',
             'created_at' => now(),
@@ -72,6 +82,9 @@ class MessageSeeder extends Seeder
             'received_by' => 1,
             'subject' => 'blood test',
             'body' => "hey doc, i'm going to have a blood test",
+            'phone_num' => '567567',
+            'age' => 24,
+            'sex' => 'male',
             'status' => '1',
             'reply_on' => '',
             'created_at' => now(),

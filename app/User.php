@@ -37,21 +37,27 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function sent(){
-        return $this->hasMany(Message::class,'sent_by');
+    public function sent()
+    {
+        return $this->hasMany(Message::class, 'sent_by');
     }
 
-    public function receive(){
-        return $this->hasMany(Message::class,'received_by');
+    public function receive()
+    {
+        return $this->hasMany(Message::class, 'received_by');
     }
 
-    public function sendMessageTo($recipient, $subject, $body, $status, $reply_on){
+    public function sendMessageTo($recipient, $subject, $body, $status, $reply_on, $phone_num, $sex, $age)
+    {
         return $this->sent()->create([
+            'received_by' => $recipient,
             'subject' => $subject,
             'body' => $body,
-            'received_by' => $recipient,
             'status' => $status,
             'reply_on' => $reply_on,
+            'phone_num' => $phone_num,
+            'sex' => $sex,
+            'age' => $age,
         ]);
     }
 }

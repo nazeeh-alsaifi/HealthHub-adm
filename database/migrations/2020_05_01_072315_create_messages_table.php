@@ -21,6 +21,9 @@ class CreateMessagesTable extends Migration
             $table->text('subject');
             $table->mediumText('body');
             $table->boolean('status');
+            $table->string('phone_num')->default('-1');
+            $table->string('sex')->default('male');
+            $table->integer('age')->default(-1);
             $table->integer('reply_on')->unsigned()->default(0);
             $table->index('sent_by');
             $table->index('received_by');
