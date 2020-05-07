@@ -67,7 +67,7 @@ if(tab !== -1) {
 
         for (let i = 0; i < slides.length; i++) {
             div = document.createElement("div");
-            div.innerHTML = i + 1;
+            div.innerHTML = i +1;
             div.setAttribute("onclick", "indicateSlide(this)");
             div.id = i;
             if (i == 0) {
@@ -141,20 +141,31 @@ if(tab !== -1) {
     }
 }
 //scroll in the same page script
-// The speed of the scroll in milliseconds
-const speed = 1700;
-
+// Select all links with hashes
 $('a[href*="#"]')
-    .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
-    .unbind('click.smoothScroll')
-    .bind('click.smoothScroll', event => {
-        const targetId = event.currentTarget.getAttribute('href').split('#')[1];
-        const targetElement = document.getElementById(targetId);
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1700)
+                // Callback after animation
+                    // Must change focus!
 
-        if (targetElement) {
-            event.preventDefault();
-            $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
+            }
         }
     });
-
-
