@@ -23,30 +23,33 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('article={article_id}', 'HomeController@show')->name('article_show');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
-//-------- Articles Controller Routes-----------
 
-//Route::get('article/{article_id}','ArticlesController@show');//{articale_id}
-//Route::get('/article/show/{title}','ArticlesController@show',function($title){});
 
-Route::get('admin/article/create', 'ArticlesController@create')->name('article_create');
+//------------ end
 
-Route::post('admin/article', 'ArticlesController@store')->name('article_store');
+//-------- Admin Controller Routes-----------
 
-Route::get('admin/article/article_num={article_id}/edit', 'ArticlesController@edit')->name('article_edit');
 
-Route::patch('admin/article/article_num={article_id}', 'ArticlesController@update')->name('article_update');
+Route::get('admin/article/create', 'AdminController@create')->name('article_create');
 
-Route::delete('admin/article/article_num={article_id}', 'ArticlesController@delete')->name('article_delete');
+Route::post('admin/article', 'AdminController@store')->name('article_store');
 
-Route::get('home/article/{article_id}', 'ArticlesController@show')->name('article_show');
+Route::get('admin/article/article_num={article_id}/edit', 'AdminController@edit')->name('article_edit');
+
+Route::patch('admin/article/article_num={article_id}', 'AdminController@update')->name('article_update');
+
+Route::delete('admin/article/article_num={article_id}', 'AdminController@delete')->name('article_delete');
+
+Route::get('/home/admin', 'AdminController@admin')->name('admin');
 //------------ end
 
 //users routes
-Route::get('/home/{username}', 'HomeController@user')->name('user');
-//------------ end
+
+Route::get('/home/{username}', 'MembersController@member')->name('member');
 
 //-------------- Messages Controller Routes-----------
 Route::get('/message/create', 'MessagesController@userCreate')->name('message_create');
