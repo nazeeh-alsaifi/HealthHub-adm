@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
-
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+     //   $this->middleware('guest');
     }
 
     /**
@@ -24,22 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+    $most_viewed=Article::orderBy('views','DESC')->get()->take(3);
+    $articles = Article::orderBy('created_at','DESC')->get();
+     Auth::logout();
+        return view('home',['most_viewed' => $most_viewed,'articles' =>$articles]);
     }
 
-    // users methods
-    public function user($username)
-    {
-        $most_viewed = Article::orderBy('views', 'DESC')->get()->take(3);
-        //dd($most_viewed);
-        $articles = Article::orderBy('created_at', 'DESC')->get();
-        if ($username == 'admin') {
 
-            return view('admin', compact('username'), ['most_viewed' => $most_viewed, 'articles' => $articles]);
-        } else {
+    public function show($article_id)
+        {
 
-            return view('home', ['most_viewed' => $most_viewed, 'articles' => $articles]);
+            Article::where('article_id', '=', $article_id)->increment('views');
+
+            $articleInfo = Article::where('article_id', '=', $article_id)->first();
+
+            return view('articles.show', compact('articleInfo'));
         }
-        //-------------end
-    }
 }
+
