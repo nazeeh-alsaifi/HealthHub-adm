@@ -183,7 +183,7 @@
                                     <label for="sex"
                                            class="col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
 
-                                    <div class="col-sm-1">
+                                    <div class="col-sm-2 col-md-1">
                                         <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="male" checked required  autofocus>
 
                                         @error('sex')
@@ -196,7 +196,7 @@
                                     <label for="sex"
                                            class="col-sm-2 col-form-label text-md-right">{{ __('Female') }}</label>
 
-                                    <div class="col-sm-1">
+                                    <div class="col-sm-2 col-md-1">
                                         <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="female" required  autofocus>
 
                                         @error('sex')
@@ -269,8 +269,8 @@
                         <div class="card-header text-center">My Conultations</div>
                         <div class="row">
                             <div class="col-lg-12 col-sm-12 mb-2 ">
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
+                                <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+                                    <table id="dtVerticalScrollExample" class="table table-hover">
                                         <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -284,6 +284,7 @@
                                         <tbody>
                                         @foreach( Auth::User()->sent as $message)
                                             <tr class="accordion-toggle collapsed" id="accordion1">
+
                                                 <td class="expand-button" data-toggle="collapse"
                                                     href="#{{'collapse'. $message->id}}"></td>
                                                 <td>{{$message->subject}}</td>
@@ -306,9 +307,11 @@
 
                                             <tr class="hide-table-padding">
                                                 <td colspan="5">
-                                                    <div id="{{'reply'. $message->id}}" class="collapse in p-3">
+                                                    <div id="{{'reply'. $message->id}}" class="collapse in p-3" style="background-color:#d33e43 ">
                                                         @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                            {{'Admin:'. Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
+                                                           <span style=" font-weight:800; color: white ;">
+                                                               Admin :{{ Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
+                                                           </span>
                                                         @endif
                                                     </div>
                                                 </td>

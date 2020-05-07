@@ -49640,7 +49640,7 @@ $('a[href*="#"]').filter(function (i, a) {
       scrollTop: $(targetElement).offset().top
     }, speed);
   }
-});
+}); //--------------
 
 /***/ }),
 

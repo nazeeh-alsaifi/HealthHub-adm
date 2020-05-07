@@ -15,7 +15,10 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="subject" type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" value="{{ old('subject') }}" required autocomplete="subject" autofocus>
+                                    <input id="subject" type="text"
+                                           class="form-control @error('subject') is-invalid @enderror"
+                                           name="subject" value="{{ old('subject') }}" required
+                                           autocomplete="subject">
 
                                     @error('subject')
                                     <span class="invalid-feedback" role="alert">
@@ -41,11 +44,56 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="age"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="age" type="text" class="form-control @error('age') is-invalid @enderror" name="age" value="{{ old('age') }}" required autocomplete="age" autofocus>
+
+                                    @error('age')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="sex"
+                                       class="col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
+
+                                <div class="col-sm-1">
+                                    <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="male" checked required  autofocus>
+
+                                    @error('sex')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+
+                                <label for="sex"
+                                       class="col-sm-2 col-form-label text-md-right">{{ __('Female') }}</label>
+
+                                <div class="col-sm-1">
+                                    <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="female" required  autofocus>
+
+                                    @error('sex')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="body"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
 
                                 <div class="col-md-6">
-                                    <textarea id="body"  class="form-control @error('body') is-invalid @enderror" name="body" required></textarea>
+                                                    <textarea id="body"
+                                                              class="form-control @error('body') is-invalid @enderror"
+                                                              name="body" required></textarea>
 
                                     @error('body')
                                     <span class="invalid-feedback" role="alert">
@@ -62,10 +110,13 @@
                                 <div class="col-md-6">
                                     <div class="captcha">
                                         <span>{!! captcha_img() !!}</span>
-                                        <button type="button" class="btn btn-success btn-refresh">Refresh</button>
+                                        <button type="button" class="btn btn-success btn-refresh">
+                                            Refresh
+                                        </button>
                                     </div>
                                     <input id="captcha" type="text"
-                                           class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha"
+                                           class="form-control mt-2 @error('captcha') is-invalid @enderror"
+                                           name="captcha"
                                            placeholder="Enter Captcha" required>
 
                                     @error('captcha')

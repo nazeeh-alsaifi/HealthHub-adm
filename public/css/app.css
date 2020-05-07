@@ -11786,6 +11786,16 @@ article {
   background: #BDBFCA;
 }
 
+.my-custom-scrollbar {
+  position: relative;
+  height: 40vh;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
 #articles-create {
   background-image: url("/images/bg1.jpg");
   max-width: 100%;
@@ -11824,6 +11834,10 @@ tr.hide-table-padding td {
 body {
   position: relative;
   min-height: 100vh;
+}
+
+main {
+  background-color: #EEEEEE;
 }
 
 .card-header {
