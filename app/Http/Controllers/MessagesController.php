@@ -43,7 +43,7 @@ class MessagesController extends Controller
         }
 
 
-        return redirect()->route('user', auth()->user()->username);
+        return redirect()->route('member', auth()->user()->username);
 
 
     }
