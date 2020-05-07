@@ -121,9 +121,9 @@
         </div>
     </div>
     @if(!(Auth::user() == null))
-        <div id="consult" class="container" style="padding: 30px">
+        <div id="consult" class="container" >
             <div class="row justify-content-center">
-                <div class="py-4 col-md-8">
+                <div class="py-4 col-md-8 col-md-12">
                     <div class="card">
                         <div class="card-header">{{ __('Write Your Consult') }}</div>
 
@@ -154,7 +154,10 @@
                                            class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="phone_num" type="text" class="form-control @error('phone_num') is-invalid @enderror" name="phone_num" value="{{ old('phone_num') }}" required autocomplete="phone_num" autofocus>
+                                        <input id="phone_num" type="text"
+                                               class="form-control @error('phone_num') is-invalid @enderror"
+                                               name="phone_num" value="{{ old('phone_num') }}" required
+                                               autocomplete="phone_num" autofocus>
 
                                         @error('phone_num')
                                         <span class="invalid-feedback" role="alert">
@@ -169,7 +172,9 @@
                                            class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="age" type="text" class="form-control @error('age') is-invalid @enderror" name="age" value="{{ old('age') }}" required autocomplete="age" autofocus>
+                                        <input id="age" type="text"
+                                               class="form-control @error('age') is-invalid @enderror" name="age"
+                                               value="{{ old('age') }}" required autocomplete="age" autofocus>
 
                                         @error('age')
                                         <span class="invalid-feedback" role="alert">
@@ -184,7 +189,9 @@
                                            class="col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
 
                                     <div class="col-sm-2 col-md-1">
-                                        <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="male" checked required  autofocus>
+                                        <input id="sex" type="radio"
+                                               class="form-control @error('sex') is-invalid @enderror" name="sex"
+                                               value="male" checked required autofocus>
 
                                         @error('sex')
                                         <span class="invalid-feedback" role="alert">
@@ -197,7 +204,9 @@
                                            class="col-sm-2 col-form-label text-md-right">{{ __('Female') }}</label>
 
                                     <div class="col-sm-2 col-md-1">
-                                        <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="female" required  autofocus>
+                                        <input id="sex" type="radio"
+                                               class="form-control @error('sex') is-invalid @enderror" name="sex"
+                                               value="female" required autofocus>
 
                                         @error('sex')
                                         <span class="invalid-feedback" role="alert">
@@ -264,7 +273,7 @@
 
         <div id="admin-replies" style="padding: 30px">
             <div class="row justify-content-center">
-                <div class="py-4 col-md-8">
+                <div class="py-4 col-md-8 col-lg-12">
                     <div class="card ">
                         <div class="card-header text-center">My Conultations</div>
                         <div class="row">
@@ -291,10 +300,10 @@
                                                 <td>{{ $message->sender->name}}</td>
                                                 <td>{{$message->created_at}}</td>
                                                 <td>
-                                                @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                    <a id="reply-link" data-toggle="collapse"
+                                                    @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
+                                                        <a id="reply-link" data-toggle="collapse"
                                                            href="#{{'reply'. $message->id}}">View Reply</a>
-                                                @endif
+                                                    @endif
                                                 </td>
                                             </tr>
                                             <tr class="hide-table-padding">
@@ -307,9 +316,10 @@
 
                                             <tr class="hide-table-padding">
                                                 <td colspan="5">
-                                                    <div id="{{'reply'. $message->id}}" class="collapse in p-3" style="background-color:#d33e43 ">
+                                                    <div id="{{'reply'. $message->id}}" class="collapse in p-3"
+                                                         style="background-color:#d33e43 ">
                                                         @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                           <span style=" font-weight:800; color: white ;">
+                                                            <span style=" font-weight:800; color: white ;">
                                                                Admin :{{ Auth::User()->receive->where('reply_on',$message->id)->first()->body}}
                                                            </span>
                                                         @endif
