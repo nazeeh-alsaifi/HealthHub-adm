@@ -46,7 +46,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo d-flex mr-auto">
-                <h1 class="text-light pr-sm-1"><a href="{{route('user',Auth::user()->username ?? '')}}">HealthHub</a>
+                <h1 class="text-light pr-sm-1"><a href="{{route('member',Auth::user()->username ?? '')}}">HealthHub</a>
                 </h1>
 
                 <div><img src="{{asset('/images/redh_blues.png')}}"
@@ -60,18 +60,18 @@
             <nav class="nav-menu d-none d-lg-block ">
                 <ul>
                     <li class="nav-item active"><a class="nav-link"
-                                                   href="{{route('user',Auth::user()->username ?? '')}}">Home</a></li>
+                                                   href="{{route('member',Auth::user()->username ?? '')}}">Home</a></li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{route('user',Auth::user()->username ??'')}}#most_viewed">Most Viewed</a>
+                                            href="{{route('member',Auth::user()->username ??'')}}#most_viewed">Most Viewed</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{route('user',Auth::user()->username ?? '')}}#articles">Articles</a>
+                                            href="{{route('member',Auth::user()->username ?? '')}}#articles">Articles</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{route('user',Auth::user()->username ?? '')}}#services">Services</a>
+                                            href="{{route('member',Auth::user()->username ?? '')}}#services">Services</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{route('user',Auth::user()->username ?? '')}}#about_us">About Us</a>
+                                            href="{{route('member',Auth::user()->username ?? '')}}#about_us">About Us</a>
                     </li>
 
                     @if(Auth::user() == null)
@@ -82,7 +82,7 @@
                             </li>
                         @else
                             <li class="nav-item"><a class="nav-link"
-                                                    href="{{route('user',Auth::user()->username)}}#consult">Consult A
+                                                    href="{{route('member',Auth::user()->username)}}#consult">Consult A
                                     Doctor</a></li>
 
                         @endif
