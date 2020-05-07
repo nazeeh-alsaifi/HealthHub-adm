@@ -150,6 +150,64 @@
                                 </div>
 
                                 <div class="form-group row">
+                                    <label for="phone_num"
+                                           class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="phone_num" type="text" class="form-control @error('phone_num') is-invalid @enderror" name="phone_num" value="{{ old('phone_num') }}" required autocomplete="phone_num" autofocus>
+
+                                        @error('phone_num')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="age"
+                                           class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="age" type="text" class="form-control @error('age') is-invalid @enderror" name="age" value="{{ old('age') }}" required autocomplete="age" autofocus>
+
+                                        @error('age')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="sex"
+                                           class="col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
+
+                                    <div class="col-sm-1">
+                                        <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="male" checked required  autofocus>
+
+                                        @error('sex')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+
+                                    <label for="sex"
+                                           class="col-sm-2 col-form-label text-md-right">{{ __('Female') }}</label>
+
+                                    <div class="col-sm-1">
+                                        <input id="sex" type="radio" class="form-control @error('sex') is-invalid @enderror" name="sex" value="female" required  autofocus>
+
+                                        @error('sex')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
                                     <label for="body"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
 
@@ -231,11 +289,12 @@
                                                 <td>{{$message->subject}}</td>
                                                 <td>{{ $message->sender->name}}</td>
                                                 <td>{{$message->created_at}}</td>
+                                                <td>
                                                 @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
-                                                    <td><a id="reply-link" data-toggle="collapse"
-                                                           href="#{{'reply'. $message->id}}">View Admin's Reply</a>
-                                                    </td>
+                                                    <a id="reply-link" data-toggle="collapse"
+                                                           href="#{{'reply'. $message->id}}">View Reply</a>
                                                 @endif
+                                                </td>
                                             </tr>
                                             <tr class="hide-table-padding">
                                                 <td colspan="5">
