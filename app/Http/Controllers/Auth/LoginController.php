@@ -81,7 +81,7 @@ class LoginController extends Controller
 
         {
         $username=auth()->user()->username;
-        return redirect()->route('user',$username);}
+        return redirect()->route('member',$username);}
 
         else{
 
