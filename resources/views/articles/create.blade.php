@@ -58,7 +58,7 @@
                                     @enderror
                                 </div>
                             </div>
-{{--                             i named it article-content instead of content alone so it doesn't interfere with yield content in app.blade.php--}}
+                            {{--                             i named it article-content instead of content alone so it doesn't interfere with yield content in app.blade.php--}}
                             <div class="form-group row">
                                 <label for="article-content"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
