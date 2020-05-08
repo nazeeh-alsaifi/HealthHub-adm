@@ -32,8 +32,8 @@ const app = new Vue({
 });
 
 // let the code inside this if run only if the url has home in it
-let tab = window.location.href.indexOf('home');
-if(tab !== -1) {
+let url = window.location.href;
+if(url.indexOf('home') !== -1) {
 
 
 //slidershow script
@@ -170,4 +170,15 @@ $('a[href*="#"]')
         }
     });
 
+
+//refresh captcha
+$('.btn-refresh').click(function () {
+    $.ajax({
+        type: 'GET',
+        url:  '/refresh_captcha',
+        success: function (data) {
+            $('.captcha span').html(data);
+        }
+    });
+});
 
