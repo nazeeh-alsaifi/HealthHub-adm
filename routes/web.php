@@ -25,7 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('article={article_id}', 'HomeController@show')->name('article_show');
 
-Route::get('logout', 'Auth\LoginController@logout');
+
 
 
 
@@ -50,7 +50,7 @@ Route::get('/home/admin', 'AdminController@admin')->name('admin');
 //users routes
 
 Route::get('/home/{username}', 'MembersController@member')->name('member');
-
+Route::get('logout', 'Auth\LoginController@logout');
 //-------------- Messages Controller Routes-----------
 Route::get('/message/create', 'MessagesController@userCreate')->name('message_create');
 Route::post('/message', 'MessagesController@sendMessage');
