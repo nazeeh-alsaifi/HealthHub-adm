@@ -49646,7 +49646,7 @@ $('a[href*="#"]') // Remove links that don't actually link to anything
   }
 }); //refresh captcha
 
-if (url.indexOf('register') != -1) $('.btn-refresh').click(function () {
+$('.btn-refresh').click(function () {
   $.ajax({
     type: 'GET',
     url: '/refresh_captcha',
