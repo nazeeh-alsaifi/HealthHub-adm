@@ -172,7 +172,6 @@ $('a[href*="#"]')
 
 
 //refresh captcha
-if(url.indexOf('register') != -1)
 $('.btn-refresh').click(function () {
     $.ajax({
         type: 'GET',
@@ -182,3 +181,4 @@ $('.btn-refresh').click(function () {
         }
     });
 });
+
