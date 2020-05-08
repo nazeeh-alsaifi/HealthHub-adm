@@ -16,17 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-//TODO: this will be used to refresh the captcha in the future
-//Route::get('/refresh_captcha',function (){ return captcha_src();});
 
 Auth::routes();
+
+Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('article={article_id}', 'HomeController@show')->name('article_show');
 
 Route::get('logout', 'Auth\LoginController@logout');
-
 
 
 //------------ end

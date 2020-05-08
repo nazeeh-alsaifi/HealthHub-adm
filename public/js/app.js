@@ -49527,9 +49527,9 @@ var app = new Vue({
   el: '#app'
 }); // let the code inside this if run only if the url has home in it
 
-var tab = window.location.href.indexOf('home');
+var url = window.location.href;
 
-if (tab !== -1) {
+if (url.indexOf('home') !== -1) {
   // ----create circle indicator----
   var circleIndicator = function circleIndicator() {
     for (var i = 0; i < slides.length; i++) {
@@ -49624,23 +49624,37 @@ if (tab !== -1) {
 
   timer = setInterval(autoPlay, 6000);
 } //scroll in the same page script
-// The speed of the scroll in milliseconds
+// Select all links with hashes
 
 
-var speed = 1700;
-$('a[href*="#"]').filter(function (i, a) {
-  return a.getAttribute('href').startsWith('#') || a.href.startsWith("".concat(location.href, "#"));
-}).unbind('click.smoothScroll').bind('click.smoothScroll', function (event) {
-  var targetId = event.currentTarget.getAttribute('href').split('#')[1];
-  var targetElement = document.getElementById(targetId);
+$('a[href*="#"]') // Remove links that don't actually link to anything
+.not('[href="#"]').not('[href="#0"]').click(function (event) {
+  // On-page links
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
 
-  if (targetElement) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(targetElement).offset().top
-    }, speed);
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1700); // Callback after animation
+      // Must change focus!
+    }
   }
-}); //--------------
+}); //refresh captcha
+
+if (url.indexOf('register') != -1) $('.btn-refresh').click(function () {
+  $.ajax({
+    type: 'GET',
+    url: '/refresh_captcha',
+    success: function success(data) {
+      $('.captcha span').html(data);
+    }
+  });
+});
 
 /***/ }),
 
