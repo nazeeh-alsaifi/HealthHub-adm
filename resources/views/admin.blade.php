@@ -145,9 +145,9 @@
                                     </thead>
                                     <tbody>
                                     @foreach( Auth::User()->receive as $message)
-                                        <tr class="accordion-toggle collapsed" id="accordion1">
+                                        <tr class="accordion-toggle collapsed" id="msg{{$message->id}}" @if($message->status == 1)style="background-color: #ECECEC" @endif>
                                             <td class="expand-button" data-toggle="collapse"
-                                                href="#{{'collapse'. $message->id}}"></td>
+                                                href="#{{'collapse'. $message->id}}" onclick="changeStatus({{$message->id}})"></td>
                                             <td>{{$message->subject}}</td>
                                             <td>{{ $message->sender->name}}</td>
                                             <td>{{$message->created_at}}</td>
@@ -188,3 +188,17 @@
     </div>
 @endsection
 
+@push('script')
+    <script>
+        function changeStatus(msgId) {
+            $.ajax({
+                type: "GET",
+                url: '/change_status/'+msgId,
+                success: function() {
+                    console.log("Data Sent");
+                }
+            });
+            document.getElementById('msg'+msgId).removeAttribute('style');
+        }
+    </script>
+@endpush

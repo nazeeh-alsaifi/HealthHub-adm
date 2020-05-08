@@ -55,5 +55,6 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/message/create', 'MessagesController@userCreate')->name('message_create');
 Route::post('/message', 'MessagesController@sendMessage');
 Route::get('/reply/{sentBy}/{messageId}', 'MessagesController@adminCreate')->name('reply_create');
+Route::get('/change_status/{messageID}','MessagesController@updateStatus');
 //-----------------end
 Route::get('/refresh_captcha','HomeController@refreshCaptcha')->name('refresh');

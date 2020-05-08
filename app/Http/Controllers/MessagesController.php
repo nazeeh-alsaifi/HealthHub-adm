@@ -67,4 +67,10 @@ class MessagesController extends Controller
         return redirect()->route('member', auth()->user()->username);
 
     }
+
+    public function updateStatus($messageId){
+
+        auth()->user()->receive->find($messageId)->update(['status' => 0]);
+    }
+
 }
