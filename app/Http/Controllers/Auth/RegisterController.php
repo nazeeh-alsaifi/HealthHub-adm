@@ -78,8 +78,4 @@ protected $redirectTo = '/home';
    {
        return route('member',auth()->user()->username);
    }
-
-   public function refreshCaptcha(){
-       return captcha_img();
-   }
 }

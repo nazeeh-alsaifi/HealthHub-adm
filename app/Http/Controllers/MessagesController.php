@@ -9,7 +9,7 @@ class MessagesController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('member');
     }
 
     public function adminCreate($sentBy, $messageId)
@@ -65,7 +65,6 @@ class MessagesController extends Controller
 
 
         return redirect()->route('member', auth()->user()->username);
-
 
     }
 }

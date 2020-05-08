@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -55,3 +54,4 @@ Route::get('/message/create', 'MessagesController@userCreate')->name('message_cr
 Route::post('/message', 'MessagesController@sendMessage');
 Route::get('/reply/{sentBy}/{messageId}', 'MessagesController@adminCreate')->name('reply_create');
 //-----------------end
+Route::get('/refresh_captcha','HomeController@refreshCaptcha')->name('refresh');

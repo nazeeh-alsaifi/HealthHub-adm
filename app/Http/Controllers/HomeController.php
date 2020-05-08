@@ -40,5 +40,10 @@ class HomeController extends Controller
 
             return view('articles.show', compact('articleInfo'));
         }
+    public function refreshCaptcha(){
+
+         return captcha_img();
+
+                           }
 }
 
