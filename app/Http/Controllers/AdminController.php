@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Article;
-
+use Intervention\Image\ImageManagerStatic as Image;
 
 class AdminController extends Controller
 {
@@ -48,9 +48,12 @@ class AdminController extends Controller
             'description' => $data['description'],
             'content' => $data['content']
             ]);
-        Article::orderBy('article_id', 'desc')->increment('article_id');
-        // $image= image::make(public_path("storage/{imagePath}"))->fit(1200,500);
-        // $image->save();
+    //  dd(  Article::latest()->increment('article_id'));
+         $image= Image::make(public_path("storage/{imagePath}"))->fit(1200,500);
+         dd($image);
+        $image->save();
+          //Image::make(request('image')->getRealPath())->fit(1500, 700)->save(public_path("storage/{imagePath}"));
+         // dd($image_resize);
         return redirect('/home/admin');
 
 
@@ -73,13 +76,12 @@ class AdminController extends Controller
             'title' => 'required',
             'description' => 'required',
             'content' => 'required']);
-
-        if (request('image')) {
-            $imagePath = request('image')->store('articleImage', 'public');
-            // $image= image::make(public_path("articleProfile/{imagePath}"))->fit(1200,500);
-            // $image->save();
-            $imageArray = ['image' => $imagePath];
-        }
+  $imagePath = request('image')->store('articleImage', 'public');
+  //dd($imagePath);
+         $image= Image::make(public_path("storage/{imagePath}"))->fit(1200,500);
+        // dd($image);
+         $image->save();
+         $imageArray = ['image' => $imagePath];
 
         Article::where('article_id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));
 
