@@ -295,20 +295,20 @@
                                             <tr class="accordion-toggle collapsed" id="accordion1">
 
                                                 <td class="expand-button" data-toggle="collapse"
-                                                    href="#{{'collapse'. $message->id}}"></td>
+                                                    href=".{{'collapse'. $message->id}}"></td>
                                                 <td>{{$message->subject}}</td>
                                                 <td>{{ $message->sender->name}}</td>
                                                 <td>{{$message->created_at}}</td>
                                                 <td>
                                                     @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
                                                         <a id="reply-link" data-toggle="collapse"
-                                                           href="#{{'reply'. $message->id}}">View Reply</a>
+                                                           href=".{{'reply'. $message->id}}">View Reply</a>
                                                     @endif
                                                 </td>
                                             </tr>
                                             <tr class="hide-table-padding">
                                                 <td colspan="5">
-                                                    <div id="{{'collapse'. $message->id}}" class="collapse in p-3">
+                                                    <div class="{{'collapse'. $message->id}} collapse in p-3">
                                                         {{$message->body}}
                                                     </div>
                                                 </td>
@@ -316,7 +316,7 @@
 
                                             <tr class="hide-table-padding">
                                                 <td colspan="5">
-                                                    <div id="{{'reply'. $message->id}}" class="collapse in p-3"
+                                                    <div  class="{{'reply'. $message->id}} collapse in p-3"
                                                          style="background-color:#d33e43 ">
                                                         @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
                                                             <span style=" font-weight:800; color: white ;">
