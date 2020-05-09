@@ -15,13 +15,17 @@ class AdminController extends Controller
         $this->middleware('admin');
     }
 
-    public function admin(){
+    public function admin()
+    {
 
-    $most_viewed=Article::orderBy('views','DESC')->get()->take(3);
+        $most_viewed = Article::orderBy('views', 'DESC')->get()->take(3);
 
-    $articles = Article::orderBy('created_at','DESC')->get();
+        $articles = Article::orderBy('created_at', 'DESC')->get();
+        $list1 = auth()->user()->receive->reverse()->where('status', 1);
+        $list2 = auth()->user()->receive->reverse()->where('status', 0);
+        $messages = array_merge($list1->all(), $list2->all());
 
-    return view('admin',['most_viewed' => $most_viewed,'articles' =>$articles]);
+        return view('admin', ['most_viewed' => $most_viewed, 'articles' => $articles,'messages' => $messages ]);
     }
 
     public function create()
@@ -39,6 +43,8 @@ class AdminController extends Controller
             'title' => 'required',
             'description' => 'required',
             'content' => 'required']);
+//dd(Article::orderBy('article_id', 'desc')->increment('article_id'));
+
 
         $imagePath = request('image')->store('uploads', 'public');
 
@@ -55,6 +61,7 @@ class AdminController extends Controller
 
         return redirect('/home/admin');
 
+
     }
 
     public function edit($article_id)
@@ -68,6 +75,7 @@ class AdminController extends Controller
 
     public function update($article_id)
     {
+
         $data = request()->validate([
             'image' => '|image',
             'title' => 'required',
@@ -96,7 +104,7 @@ if(request('image')){
 
         Article::where('article_id', '=', $article_id)->delete();
 
-        Article::where('article_id','>',$article_id)->decrement('article_id');
+        Article::where('article_id', '>', $article_id)->decrement('article_id');
 
         return redirect('/home/admin');
     }

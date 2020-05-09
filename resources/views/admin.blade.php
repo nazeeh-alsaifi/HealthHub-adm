@@ -127,12 +127,12 @@
     </div>
     <div id="users_consultations" style="padding: 30px">
         <div class="row justify-content-center">
-            <div class="py-4 col-md-8">
+            <div class="py-4 col-md-8 col-lg-12">
                 <div class="card">
                     <div class="card-header text-center">Users Consultations</div>
                     <div class="row">
                         <div class="col-lg-12 col-sm-12 mb-2">
-                            <div class="table-responsive">
+                            <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
@@ -144,10 +144,12 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach( Auth::User()->receive as $message)
-                                        <tr class="accordion-toggle collapsed" id="msg{{$message->id}}" @if($message->status == 1)style="background-color: #ECECEC" @endif>
+                                    @foreach( $messages as $message)
+                                        <tr class="accordion-toggle collapsed" id="msg{{$message->id}}"
+                                            @if($message->status == 1)style="background-color: #ECECEC" @endif>
                                             <td class="expand-button" data-toggle="collapse"
-                                                href="#{{'collapse'. $message->id}}" onclick="changeStatus({{$message->id}})"></td>
+                                                href="#{{'collapse'. $message->id}}"
+                                                onclick="changeStatus({{$message->id}})"></td>
                                             <td>{{$message->subject}}</td>
                                             <td>{{ $message->sender->name}}</td>
                                             <td>{{$message->created_at}}</td>
@@ -169,9 +171,12 @@
                                         </tr>
                                         <tr class="hide-table-padding">
                                             <td colspan="5">
-                                                <div id="{{'reply'. $message->id}}" class="collapse in p-3">
+                                                <div id="{{'reply'. $message->id}}" class="collapse in p-3"
+                                                     style="background-color:#d33e43 ">
                                                     @if((Auth::User()->sent->where('reply_on',$message->id)->first()) != null)
-                                                        {{'Admin:'. Auth::User()->sent->where('reply_on',$message->id)->first()->body}}
+                                                        <span style=" font-weight:800; color: white ;">
+                                                               Admin :{{Auth::User()->sent->where('reply_on',$message->id)->first()->body}}
+                                                        </span>
                                                     @endif
                                                 </div>
                                             </td>
@@ -193,12 +198,12 @@
         function changeStatus(msgId) {
             $.ajax({
                 type: "GET",
-                url: '/change_status/'+msgId,
-                success: function() {
+                url: '/change_status/' + msgId,
+                success: function () {
                     console.log("Data Sent");
                 }
             });
-            document.getElementById('msg'+msgId).removeAttribute('style');
+            document.getElementById('msg' + msgId).removeAttribute('style');
         }
     </script>
 @endpush
