@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Article;
 use Intervention\Image\ImageManagerStatic as Image;
+Use Alert;
 
 class AdminController extends Controller
 {
@@ -31,31 +32,28 @@ class AdminController extends Controller
 
     public function store()
     {
+        Article::orderBy('article_id', 'desc')->increment('article_id');
 
         $data = request()->validate([
             'image' => 'required|image',
             'title' => 'required',
             'description' => 'required',
             'content' => 'required']);
-//dd(Article::orderBy('article_id', 'desc')->increment('article_id'));
-
 
         $imagePath = request('image')->store('uploads', 'public');
-        Article::create([
 
-            'image' => $imagePath,
-            'title' => $data['title'],
-            'description' => $data['description'],
-            'content' => $data['content']
-            ]);
-    //  dd(  Article::latest()->increment('article_id'));
-         $image= Image::make(public_path("storage/{imagePath}"))->fit(1200,500);
-         dd($image);
+        $image= Image::make(public_path("storage/{$imagePath}"));
+        $image->fit(1200,1000);
         $image->save();
-          //Image::make(request('image')->getRealPath())->fit(1500, 700)->save(public_path("storage/{imagePath}"));
-         // dd($image_resize);
-        return redirect('/home/admin');
 
+        Article::create([
+                     'image' => $imagePath,
+                     'title' => $data['title'],
+                     'description' => $data['description'],
+                     'content' => $data['content']
+                     ]);
+
+        return redirect('/home/admin');
 
     }
 
@@ -70,22 +68,26 @@ class AdminController extends Controller
 
     public function update($article_id)
     {
-
         $data = request()->validate([
             'image' => '|image',
             'title' => 'required',
             'description' => 'required',
             'content' => 'required']);
-  $imagePath = request('image')->store('articleImage', 'public');
-  //dd($imagePath);
-         $image= Image::make(public_path("storage/{imagePath}"))->fit(1200,500);
-        // dd($image);
-         $image->save();
-         $imageArray = ['image' => $imagePath];
+
+if(request('image')){
+        $imagePath = request('image')->store('articleImage', 'public');
+
+        $image= Image::make(public_path("storage/{$imagePath}"));
+        $image->fit(1200,1000);
+        $image->save();
+        $imageArray = ['image' => $imagePath];
+        }
 
         Article::where('article_id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));
+ //if($data ==false){return redirect('/admin/article/article_num={$article_id}/edit')->with(Alert::question('Question Title', 'Question Message'));
 
         return redirect('/home/admin');
+        //  toast('you have submitted changes successfully','success');
     }
 
     public function delete($article_id)
@@ -98,4 +100,14 @@ class AdminController extends Controller
 
         return redirect('/home/admin');
     }
+
+    public function msg(){
+    if(Alert::question('Are you sure?', 'Question Message') == true){
+
+    toast('you have submitted changes successfully','success');
+
+    return redirect('/home/admin');
+    }
+    }
+
 }
