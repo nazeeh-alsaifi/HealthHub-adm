@@ -9,7 +9,7 @@ class MessagesController extends Controller
 
     public function __construct()
     {
-        $this->middleware('member');
+        $this->middleware('auth');
     }
 
     public function adminCreate($sentBy, $messageId)
