@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+Use Alert;
 
 class LoginController extends Controller
 
@@ -62,9 +63,11 @@ class LoginController extends Controller
 
         if (auth()->attempt(array($fieldType => $input['username'], 'password' => $input['password']))) {
             $username = auth()->user()->username;
+             toast('you have logged in successfully','success');
             return redirect()->route('member', $username);
-        } else {
 
+        } else {
+            toast('login has failed! Please try again','error');
             return redirect()->route('login')
                 ->with('error', 'Email-Address And Password Are Wrong.');
 
@@ -76,6 +79,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
+        toast('you have logged out successfully','success');
         return redirect()->route('home');
     }
 }

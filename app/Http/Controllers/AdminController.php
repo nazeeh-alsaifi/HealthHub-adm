@@ -43,7 +43,6 @@ class AdminController extends Controller
             'title' => 'required',
             'description' => 'required',
             'content' => 'required']);
-//dd(Article::orderBy('article_id', 'desc')->increment('article_id'));
 
 
         $imagePath = request('image')->store('uploads', 'public');
@@ -75,27 +74,24 @@ class AdminController extends Controller
 
     public function update($article_id)
     {
-
         $data = request()->validate([
             'image' => '|image',
             'title' => 'required',
             'description' => 'required',
             'content' => 'required']);
 
-if(request('image')){
-        $imagePath = request('image')->store('articleImage', 'public');
+        if(request('image')){
+         $imagePath = request('image')->store('articleImage', 'public');
 
-        $image= Image::make(public_path("storage/{$imagePath}"));
-        $image->fit(1200,1000);
-        $image->save();
-        $imageArray = ['image' => $imagePath];
+         $image= Image::make(public_path("storage/{$imagePath}"));
+         $image->fit(1200,1000);
+         $image->save();
+         $imageArray = ['image' => $imagePath];
         }
 
         Article::where('article_id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));
- //if($data ==false){return redirect('/admin/article/article_num={$article_id}/edit')->with(Alert::question('Question Title', 'Question Message'));
 
         return redirect('/home/admin');
-        //  toast('you have submitted changes successfully','success');
     }
 
     public function delete($article_id)
@@ -108,14 +104,4 @@ if(request('image')){
 
         return redirect('/home/admin');
     }
-
-    public function msg(){
-    if(Alert::question('Are you sure?', 'Question Message') == true){
-
-    toast('you have submitted changes successfully','success');
-
-    return redirect('/home/admin');
-    }
-    }
-
 }
