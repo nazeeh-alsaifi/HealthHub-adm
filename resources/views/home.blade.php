@@ -157,7 +157,7 @@
                                         <input id="phone_num" type="text"
                                                class="form-control @error('phone_num') is-invalid @enderror"
                                                name="phone_num" value="{{ old('phone_num') }}" required
-                                               autocomplete="phone_num" autofocus>
+                                               autocomplete="phone_num">
 
                                         @error('phone_num')
                                         <span class="invalid-feedback" role="alert">
@@ -174,7 +174,7 @@
                                     <div class="col-md-6">
                                         <input id="age" type="text"
                                                class="form-control @error('age') is-invalid @enderror" name="age"
-                                               value="{{ old('age') }}" required autocomplete="age" autofocus>
+                                               value="{{ old('age') }}" required autocomplete="age">
 
                                         @error('age')
                                         <span class="invalid-feedback" role="alert">
@@ -191,7 +191,7 @@
                                     <div class="col-sm-2 col-md-1">
                                         <input id="sex" type="radio"
                                                class="form-control @error('sex') is-invalid @enderror" name="sex"
-                                               value="male" checked required autofocus>
+                                               value="male" checked required>
 
                                         @error('sex')
                                         <span class="invalid-feedback" role="alert">
@@ -206,7 +206,7 @@
                                     <div class="col-sm-2 col-md-1">
                                         <input id="sex" type="radio"
                                                class="form-control @error('sex') is-invalid @enderror" name="sex"
-                                               value="female" required autofocus>
+                                               value="female" required>
 
                                         @error('sex')
                                         <span class="invalid-feedback" role="alert">
