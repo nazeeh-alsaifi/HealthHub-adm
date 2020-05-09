@@ -42,6 +42,8 @@ Route::patch('admin/article/article_num={article_id}', 'AdminController@update')
 
 Route::delete('admin/article/article_num={article_id}', 'AdminController@delete')->name('article_delete');
 
+Route::get('admin/article/article_num={article_id}', 'AdminController@msg')->name('confirmation_msg');
+
 Route::get('/home/admin', 'AdminController@admin')->name('admin');
 //------------ end
 
