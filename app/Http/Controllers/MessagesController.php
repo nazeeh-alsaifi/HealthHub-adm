@@ -47,9 +47,9 @@ class MessagesController extends Controller
                 'subject' => ['required', 'string'],
                 'body' => ['required', 'string', 'min:10'],
                 'captcha' => ['required', 'captcha'],
-                'phone_num' => ['required','string'],
+                'phone_num' => ['required','numeric'],
                 'sex' => ['required','string'],
-                'age' => ['required']
+                'age' => ['required','integer']
             ]);
             auth()->user()->sent()->create([
                 'received_by' => 1,

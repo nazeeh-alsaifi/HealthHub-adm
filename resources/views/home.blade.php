@@ -36,7 +36,6 @@
                                 </div>
                             </div>
                         </div>
-
                         {{$i++}}
                     @endforeach
                 </div>
@@ -45,14 +44,11 @@
                     <div class="next">></div>
                 </div>
 
-
                 <div class="indicator">
 
                 </div>
             </section>
-    </div>
-
-    @endif
+        @endif
     </div>
     <div id="articles" style="padding: 30px">
         <div class="row justify-content-center">
@@ -83,13 +79,11 @@
                                             </h4>
                                             <p class="card-text">{{$article->description}}</p>
 
-                                            <small><b>Viewed by: {{$article->views}} &#128065;</b>
-
-                                                <p>published at: {{$article->created_at}}</p></small>
-
+                                            <small>
+                                                <b>Viewed by: {{$article->views}} &#128065;</b>
+                                                <p>published at: {{$article->created_at}}</p>
+                                            </small>
                                         </div>
-
-
                                     </div>
                                 </div>
                             @endforeach
@@ -97,9 +91,7 @@
                     </div>
                 </div>
             </div>
-            <!-- /.row -->
         </div>
-    </div>
     </div>
 
     <div id="services" style="padding: 30px">
@@ -121,7 +113,7 @@
         </div>
     </div>
     @if(!(Auth::user() == null))
-        <div id="consult" class="container" >
+        <div id="consult-form" style="padding: 30px">
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8 col-md-12">
                     <div class="card">
@@ -186,12 +178,12 @@
 
                                 <div class="form-group row">
                                     <label for="sex"
-                                           class="col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
+                                           class="col-2 col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
 
-                                    <div class="col-sm-2 col-md-1">
+                                    <div style="width:1%">
                                         <input id="sex" type="radio"
                                                class="form-control @error('sex') is-invalid @enderror" name="sex"
-                                               value="male" checked required>
+                                               value="male"  required>
 
                                         @error('sex')
                                         <span class="invalid-feedback" role="alert">
@@ -201,9 +193,9 @@
                                     </div>
 
                                     <label for="sex"
-                                           class="col-sm-2 col-form-label text-md-right">{{ __('Female') }}</label>
+                                           class="col-2 col-sm-2 col-md-1 col-lg-1 col-form-label text-md-right">{{ __('Female') }}</label>
 
-                                    <div class="col-sm-2 col-md-1">
+                                    <div style="width:1%">
                                         <input id="sex" type="radio"
                                                class="form-control @error('sex') is-invalid @enderror" name="sex"
                                                value="female" required>
@@ -316,7 +308,7 @@
 
                                             <tr class="hide-table-padding">
                                                 <td colspan="5">
-                                                    <div  class="{{'reply'. $message->id}} collapse in p-3"
+                                                    <div class="{{'reply'. $message->id}} collapse in p-3"
                                                          style="background-color:#d33e43 ">
                                                         @if((Auth::User()->receive->where('reply_on',$message->id)->first()) != null)
                                                             <span style=" font-weight:800; color: white ;">
