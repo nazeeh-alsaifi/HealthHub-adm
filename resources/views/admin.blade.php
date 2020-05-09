@@ -2,12 +2,14 @@
 
 @section('content')
     <div id="home" class="container">
-        <div id="most_viewed" style="padding: 30px">
+        <div id="most_viewed" style="padding-top: 10vh">
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8">
 
                     <div class="card">
-                        <div class="card-header">Most Viewed</div>
+                        <div class="card-header text-center font-weight-bolder">
+                            <span class="card_header_text "> Most Viewed</span>
+                        </div>
                         <div class="row">
 
                             @if($most_viewed->isEmpty())
@@ -57,7 +59,8 @@
 
                     <div class="card">
 
-                        <div class="card-header pt-2">Articles
+                        <div class="card-header pt-2 text-center font-weight-bolder ">
+                            <span class="card_header_text ">Articles</span>
                             <a href="{{route('article_create')}}">
                                 <button type="button" class="btn btn-primary"
                                         style="border-radius: 12px;float:right;">
@@ -111,7 +114,7 @@
         <div class="row justify-content-center">
             <div class="py-4 col-md-8 col-lg-12">
                 <div class="card">
-                    <div class="card-header text-center">Users Consultations</div>
+                    <div class="card-header text-center font-weight-bolder"><span class="card_header_text">Users Consultations</span></div>
                     <div class="row">
                         <div class="col-lg-12 col-sm-12 mb-2">
                             <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">

@@ -37,5 +37,9 @@ main {
 .card-header {
     background: #3D3F4B;
     color: #fff;
+
+    .card-header-text{
+        font-size: 125%;
+    }
 }
 

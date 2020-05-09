@@ -49640,7 +49640,7 @@ $('a[href*="#"]') // Remove links that don't actually link to anything
       event.preventDefault();
       $('html, body').animate({
         scrollTop: target.offset().top
-      }, 1700); // Callback after animation
+      }, 1000); // Callback after animation
       // Must change focus!
     }
   }
