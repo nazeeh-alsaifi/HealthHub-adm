@@ -41,7 +41,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                </div>
+                            </div>
                             </div>
 
                             <div class="form-group row">
@@ -79,10 +79,12 @@
 
                             <div class="form-group row mb-0 ">
                                 <div class="col-md-6 offset-md-4 d-flex">
+                                    <form method="post" action="{{route('article_update',$articleInfo->article_id)}}" enctype="multipart/form-data">
+                                        @method('PATCH')
+                                        @csrf
 
                                     <button type="submit" class="btn btn-primary">
-
-                                        {{ __('Save Changes') }}
+                                        {{__('Save Changes') }}
                                     </button>
 
                         </form>
@@ -103,6 +105,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
