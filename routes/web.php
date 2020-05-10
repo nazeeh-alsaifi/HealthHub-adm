@@ -38,9 +38,9 @@ Route::post('admin/article', 'AdminController@store')->name('article_store');
 
 Route::get('admin/article/article_num={article_id}/edit', 'AdminController@edit')->name('article_edit');
 
-Route::patch('admin/article/article_num={article_id}', 'AdminController@update')->name('article_update');
+Route::patch('admin/article/article_num={article_id}', 'AdminController@updatearticle')->name('article_update');
 
-Route::delete('admin/article/article_num={article_id}', 'AdminController@delete')->name('article_delete');
+Route::get('admin/article/article_num={article_id}', 'AdminController@delete')->name('article_delete');
 
 Route::get('/home/admin', 'AdminController@admin')->name('admin');
 //------------ end
