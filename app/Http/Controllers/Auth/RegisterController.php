@@ -76,6 +76,7 @@ protected $redirectTo = '/home';
    }
   protected function redirectTo()
    {
+       toast('you have signed up successfully','success');
        return route('member',auth()->user()->username);
    }
 }
