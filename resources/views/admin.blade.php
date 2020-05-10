@@ -107,24 +107,6 @@
         </div>
     </div>
 
-    <div id="services" style="padding: 30px">
-        <div class="row justify-content-center">
-            <div class="py-4 col-md-8">
-                <div class="card">
-                    <div class="card-header">services</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="about_us" style="padding: 30px">
-        <div class="row justify-content-center">
-            <div class="py-4 col-md-8">
-                <div class="card">
-                    <div class="card-header">About Us</div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="users_consultations" style="padding: 30px">
         <div class="row justify-content-center">
             <div class="py-4 col-md-8 col-lg-12">
@@ -191,6 +173,26 @@
             </div>
         </div>
     </div>
+
+    <div id="services" style="padding: 30px">
+        <div class="row justify-content-center">
+            <div class="py-4 col-md-8">
+                <div class="card">
+                    <div class="card-header">services</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about_us" style="padding: 30px">
+        <div class="row justify-content-center">
+            <div class="py-4 col-md-8">
+                <div class="card">
+                    <div class="card-header">About Us</div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @push('script')
@@ -207,3 +209,4 @@
         }
     </script>
 @endpush
+
