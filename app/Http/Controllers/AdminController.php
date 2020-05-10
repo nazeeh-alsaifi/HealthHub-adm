@@ -13,6 +13,7 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('admin');
+        $this->middleware('revalidate');
     }
 
     public function admin()
@@ -58,7 +59,7 @@ class AdminController extends Controller
                      'content' => $data['content']
                      ]);
 
-        return redirect('/home/admin');
+        return redirect('/home/admin')->with('success','The article has been added successfully');
 
 
     }
@@ -72,7 +73,7 @@ class AdminController extends Controller
         return view('articles.edit', compact('articleInfo'));
     }
 
-    public function update($article_id)
+    public function updatearticle($article_id)
     {
         $data = request()->validate([
             'image' => '|image',
@@ -91,7 +92,7 @@ class AdminController extends Controller
 
         Article::where('article_id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));
 
-        return redirect('/home/admin');
+        return redirect('/home/admin')->with('success','Changes have been Saved');
     }
 
     public function delete($article_id)
@@ -102,6 +103,8 @@ class AdminController extends Controller
 
         Article::where('article_id', '>', $article_id)->decrement('article_id');
 
-        return redirect('/home/admin');
+        return redirect('/home/admin')->with('success','Article deleted successfully');
+
     }
+
 }
