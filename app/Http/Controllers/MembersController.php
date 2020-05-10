@@ -10,6 +10,8 @@ class MembersController extends Controller
     public function __construct()
     {
         $this->middleware('members');
+        $this->middleware('revalidate');
+
     }
 
     // users methods
