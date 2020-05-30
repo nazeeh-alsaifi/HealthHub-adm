@@ -77,6 +77,8 @@
 
                     @if(Auth::user() == null)
                         <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Consult A Doctor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Use Expert System</a></li>
+
                     @else
                         @if(Auth::user()->username == 'admin')
                             <li class="nav-item"><a class="nav-link" href="#users_consultations">Users Consultations</a>
@@ -85,6 +87,7 @@
                             <li class="nav-item"><a class="nav-link"
                                                     href="{{route('member',Auth::user()->username)}}#consult">Consult A
                                     Doctor</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('expert_create')}}">Use Expert System</a></li>
 
                         @endif
                     @endif

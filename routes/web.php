@@ -49,10 +49,20 @@ Route::get('/home/admin', 'AdminController@admin')->name('admin');
 
 Route::get('/home/{username}', 'MembersController@member')->name('member');
 Route::get('logout', 'Auth\LoginController@logout');
+
 //-------------- Messages Controller Routes-----------
 Route::get('/message/create', 'MessagesController@userCreate')->name('message_create');
 Route::post('/message', 'MessagesController@sendMessage');
 Route::get('/reply/{sentBy}/{messageId}', 'MessagesController@adminCreate')->name('reply_create');
 Route::get('/change_status/{messageID}','MessagesController@updateStatus');
-//-----------------end
+//---------------------------------------------------------------------------------------
+
+//---------------------- CAPTCHA ------------------
 Route::get('/refresh_captcha','HomeController@refreshCaptcha')->name('refresh');
+//---------------------------------------------------
+
+//--------------------- Expert System --------------------------
+Route::get('/expert/create', 'ExpertController@userCreate')->name('expert_create');
+Route::post('/expert', 'ExpertController@predict')->name('expert_predict');
+
+//----------------------------------------------------------

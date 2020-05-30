@@ -1,13 +1,23 @@
 <?php
-$training_dir = 'id3_training.csv';
-$testing_dir = 'new testing.csv';
-$target = 'value';
 
-$run = new bayes($training_dir,$testing_dir,$target);
+
+
+namespace App\expert_alg;
+use Brick\Math\Exception\DivisionByZeroException;
+
+//$training_dir = 'bayes_training.csv';
+//$testing_dir = 'new testing.csv';
+//$target = 'value';
+//$run = new bayes();
+
 class bayes
 {
-    public $model= array();
-    function __construct($training_dir,$testing_dir,$target){
+    private $model = array();
+
+    function __construct($training_dir)
+    {
+        $target = 'value';
+
         $training_data = $this->csv_to_array($training_dir);
         $S = $training_data['samples'];
         $model['value'] = $this->propabitlity($S, $target);
@@ -17,9 +27,10 @@ class bayes
                 $model[$attr] = $this->propabitlity($S, $target, $attr);
         }
 
-        $this->model=$model;
-
+        $this->model = $model;
     }
+
+
     function csv_to_array($filename = '', $delimiter = ',')
     {
         $training_data = array();
@@ -71,12 +82,12 @@ class bayes
     function propabitlity($samples, $target, $attribute = null)
     {
         $classes_prob = array();
-        $possible_class_values_count =$this->possible_values($samples, $target);
+        $possible_class_values_count = $this->possible_values($samples, $target);
         $total_count = count($samples);
         foreach ($possible_class_values_count as $key => $val) {
             try {
                 $classes_prob[$key] = $val / $total_count;
-            } catch (\Cassandra\Exception\DivideByZeroException $exception) {
+            } catch ( DivisionByZeroException $exception) {
                 print_r($exception);
             };
 
@@ -95,7 +106,7 @@ class bayes
                 foreach ($possible_subset_values_count as $key => $val) {
                     try {
                         $attribute_prob[$key] = $val / $possible_class_values_count[$key];
-                    } catch (\Cassandra\Exception\DivideByZeroException $exception) {
+                    } catch (DivisionByZeroException $exception) {
                         print_r($exception);
                     };
 

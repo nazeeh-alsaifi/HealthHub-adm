@@ -6,7 +6,6 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +18,6 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,13 +25,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
-
 // let the code inside this if run only if the url has home in it
 let url = window.location.href;
-if(url.indexOf('home') !== -1) {
+if (url.indexOf('home') !== -1) {
 
 
 //slidershow script
@@ -67,7 +61,7 @@ if(url.indexOf('home') !== -1) {
 
         for (let i = 0; i < slides.length; i++) {
             div = document.createElement("div");
-            div.innerHTML = i +1;
+            div.innerHTML = i + 1;
             div.setAttribute("onclick", "indicateSlide(this)");
             div.id = i;
             if (i == 0) {
@@ -143,15 +137,15 @@ if(url.indexOf('home') !== -1) {
 //scroll in the same page script
 // Select all links with hashes
 $('a[href*="#"]')
-    // Remove links that don't actually link to anything
+// Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
-    .click(function(event) {
+    .click(function (event) {
         // On-page links
         if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
             &&
-            location.hostname == this.hostname
+            location.hostname === this.hostname
         ) {
             // Figure out element to scroll to
             var target = $(this.hash);
@@ -164,7 +158,7 @@ $('a[href*="#"]')
                     scrollTop: target.offset().top
                 }, 1000)
                 // Callback after animation
-                    // Must change focus!
+                // Must change focus!
 
             }
         }
@@ -175,7 +169,7 @@ $('a[href*="#"]')
 $('.btn-refresh').click(function () {
     $.ajax({
         type: 'GET',
-        url:  '/refresh_captcha',
+        url: '/refresh_captcha',
         success: function (data) {
             $('.captcha span').html(data);
         }
