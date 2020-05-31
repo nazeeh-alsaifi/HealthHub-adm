@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\expert_alg\bayes;
+use App\expert_alg\DecisionTree;
 use Illuminate\Http\Request;
 
 class ExpertController extends Controller
 {
     private $bayes;
-
+    private $id3;
     function __construct()
     {
         $this->bayes = new bayes(public_path('bayes_training.csv'));
+        $this->id3 =  new DecisionTree(public_path('bayes_training.csv'), 0);
         $this->middleware('auth');
     }
 
@@ -93,8 +95,9 @@ class ExpertController extends Controller
            // dd($result);
             return view('expert_system.create', ['result' => $result]);
         } else {
-            dd($validated_data);
+            $result = $this->id3->predictUsingArray($validated_data);
 
+            return view('expert_system.create',['result' => $result]);
         }
 
 
