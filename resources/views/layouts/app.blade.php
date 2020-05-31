@@ -224,5 +224,6 @@
     <!-- End Footer -->
 </div>
 {{--end app--}}
+@stack('script')
 </body>
 </html>

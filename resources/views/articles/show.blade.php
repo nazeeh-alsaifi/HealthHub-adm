@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="home" class="container p-5" style="background-image: url('/storage/{{$articleInfo->image}}')">
+    <div id="home" class="container p-5" style="background-image: url('/public/images/{{$articleInfo->image}}')">
         <div id="article" style="padding: 30px">
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8">

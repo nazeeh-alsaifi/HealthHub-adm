@@ -45,15 +45,20 @@ class AdminController extends Controller
             'description' => 'required',
             'content' => 'required']);
 
+  if ($image = $data['image']) {
 
-        $imagePath = request('image')->store('uploads', 'public');
+        $destinationPath = 'public/images'; // upload path
+        $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+        //dd($profileImage);
 
-        $image= Image::make(public_path("storage/{$imagePath}"));
+
+        $image->move($destinationPath, $profileImage);
+        $image= Image::make(public_path("{$destinationPath}/{$profileImage}"));
         $image->fit(1200,1000);
         $image->save();
-
+}
         Article::create([
-                     'image' => $imagePath,
+                     'image' => $profileImage,
                      'title' => $data['title'],
                      'description' => $data['description'],
                      'content' => $data['content']
@@ -81,13 +86,16 @@ class AdminController extends Controller
             'description' => 'required',
             'content' => 'required']);
 
-        if(request('image')){
-         $imagePath = request('image')->store('articleImage', 'public');
+        if($image = $data['image']){
 
-         $image= Image::make(public_path("storage/{$imagePath}"));
-         $image->fit(1200,1000);
-         $image->save();
-         $imageArray = ['image' => $imagePath];
+               $destinationPath = 'public/images'; // upload path
+               $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+               $image->move($destinationPath, $profileImage);
+               $image= Image::make(public_path("{$destinationPath}/{$profileImage}"));
+               $image->fit(1200,1000);
+               $image->save();
+
+         $imageArray = ['image' => $profileImage];
         }
 
         Article::where('article_id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));

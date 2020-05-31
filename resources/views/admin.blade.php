@@ -23,7 +23,7 @@
                                         <div class="smaller-card card h-100" style="text-align: center">
                                             <a href="{{route('article_show',$article->article_id)}}"><img
                                                     class="card-img-top"
-                                                    src="/storage/{{$article->image}}"
+                                                    src="/public/images/{{$article->image}}"
                                                     alt=""></a>
                                             <div class="card-body">
                                                 <h4 class="card-title">
@@ -82,7 +82,7 @@
                                         <div class="smaller-card card h-100" style="text-align: center">
                                             <a href="{{route('article_show',$article->article_id)}}"><img
                                                     class="card-img-top"
-                                                    src="/storage/{{$article->image}}"
+                                                    src="/public/images/{{$article->image}}"
                                                     alt=""></a>
                                             <div class="card-body">
                                                 <h4 class="card-title">
