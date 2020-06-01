@@ -37,8 +37,10 @@ class AdminController extends Controller
 
     public function store()
     {
-        Article::orderBy('article_id', 'desc')->increment('article_id');
-
+        $newIndex=Article::orderBy('article_id', 'desc')->first();
+        if($newIndex == null){
+            $newIndex['article_id']=0;
+        }
         $data = request()->validate([
             'image' => 'required|image',
             'title' => 'required',
@@ -58,6 +60,7 @@ class AdminController extends Controller
         $image->save();
 }
         Article::create([
+                    'article_id' => $newIndex['article_id']+1,
                      'image' => $profileImage,
                      'title' => $data['title'],
                      'description' => $data['description'],
