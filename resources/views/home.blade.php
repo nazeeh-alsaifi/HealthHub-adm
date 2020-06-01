@@ -32,7 +32,7 @@
                                 <div class="caption">
                                     <h1>{{$i}}. {{$article->title}}</h1>
                                     <p>{{$article->description}}</p>
-                                    <a href="{{route('article_show',$article->article_id)}}">Find More Here</a>
+                                    <a href="{{route('article_show',$article->id)}}">Find More Here</a>
                                 </div>
                             </div>
                         </div>
@@ -69,13 +69,13 @@
                                 <div class="col-lg-4 col-sm-6 mb-2 mt-2">
 
                                     <div class="smaller-card card h-100" style="text-align: center">
-                                        <a href="{{route('article_show',$article->article_id)}}"><img
+                                        <a href="{{route('article_show',$article->id)}}"><img
                                                 class="card-img-top"
                                                 src="/public/images/{{$article->image}}"
                                                 alt=""></a>
                                         <div class="card-body">
                                             <h4 class="card-title">
-                                                <a href="{{route('article_show',$article->article_id)}}">{{$article->title}}</a>
+                                                <a href="{{route('article_show',$article->id)}}">{{$article->title}}</a>
                                             </h4>
                                             <p class="card-text">{{$article->description}}</p>
 

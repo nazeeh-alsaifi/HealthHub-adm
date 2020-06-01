@@ -34,9 +34,9 @@ class HomeController extends Controller
     public function show($article_id)
         {
 
-            Article::where('article_id', '=', $article_id)->increment('views');
+            Article::where('id', '=', $article_id)->increment('views');
 
-            $articleInfo = Article::where('article_id', '=', $article_id)->first();
+            $articleInfo = Article::where('id', '=', $article_id)->first();
 
             return view('articles.show', compact('articleInfo'));
         }

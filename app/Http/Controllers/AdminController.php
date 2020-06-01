@@ -37,9 +37,9 @@ class AdminController extends Controller
 
     public function store()
     {
-        $newIndex=Article::orderBy('article_id', 'desc')->first();
+        $newIndex=Article::orderBy('id', 'desc')->first();
         if($newIndex == null){
-            $newIndex['article_id']=0;
+            $newIndex['id']=0;
         }
         $data = request()->validate([
             'image' => 'required|image',
@@ -60,7 +60,7 @@ class AdminController extends Controller
         $image->save();
 }
         Article::create([
-                    'article_id' => $newIndex['article_id']+1,
+                    'id' => $newIndex['id']+1,
                      'image' => $profileImage,
                      'title' => $data['title'],
                      'description' => $data['description'],
@@ -75,7 +75,7 @@ class AdminController extends Controller
     public function edit($article_id)
     {
 
-        $articleInfo = Article::where('article_id', '=', $article_id)->first();
+        $articleInfo = Article::where('id', '=', $article_id)->first();
 
 
         return view('articles.edit', compact('articleInfo'));
@@ -101,7 +101,7 @@ class AdminController extends Controller
          $imageArray = ['image' => $profileImage];
         }
 
-        Article::where('article_id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));
+        Article::where('id', '=', $article_id)->update(array_merge($data, $imageArray ?? []));
 
         return redirect('/home/admin')->with('success','Changes have been Saved');
     }
@@ -110,9 +110,9 @@ class AdminController extends Controller
     {
 
 
-        Article::where('article_id', '=', $article_id)->delete();
+        Article::where('id', '=', $article_id)->delete();
 
-        Article::where('article_id', '>', $article_id)->decrement('article_id');
+        Article::where('id', '>', $article_id)->decrement('id');
 
         return redirect('/home/admin')->with('success','Article deleted successfully');
 

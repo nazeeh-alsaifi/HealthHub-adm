@@ -6,9 +6,9 @@
         <div class="row justify-content-center">
             <div class="py-4 col-md-8">
                 <div class="card">
-                    <div class="card-header">Edit Article Number: {{$articleInfo->article_id}}</div>
+                    <div class="card-header">Edit Article Number: {{$articleInfo->id}}</div>
                     <div class="card-body">
-                        <form method="post" action="{{route('article_update',$articleInfo->article_id)}}"
+                        <form method="post" action="{{route('article_update',$articleInfo->id)}}"
                               enctype="multipart/form-data">
                             @method('PATCH')
                             @csrf
@@ -92,7 +92,7 @@ a                                    </span>
                                         <span class="pl-5">
 
                                 <button type="submit" class="btn btn-primary"
-                                        style="background-color: #c51f1a;border-color: #c51f1a" data-id="{{$articleInfo->article_id}}" onclick="deleteConfirmation()">
+                                        style="background-color: #c51f1a;border-color: #c51f1a" data-id="{{$articleInfo->id}}" onclick="deleteConfirmation()">
                                         {{ __('Delete Article') }}
                                 </button>
                             </span>
@@ -117,7 +117,7 @@ a                                    </span>
                         confirmButtonText: 'Yes, delete it!'
                     }).then((result) => {
                         if (result.value) {
-                            window.location = "{{route('article_delete',$articleInfo->article_id)}}";
+                            window.location = "{{route('article_delete',$articleInfo->id)}}";
                         }
                     })
 
