@@ -23,7 +23,6 @@ class MessageSeeder extends Seeder
             'age' => 25,
             'sex' => 'male',
             'status' => '1',
-            'reply_on' => '',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -37,7 +36,6 @@ class MessageSeeder extends Seeder
             'age' => 24,
             'sex' => 'male',
             'status' => '1',
-            'reply_on' => '',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -72,7 +70,6 @@ class MessageSeeder extends Seeder
             'age' => 24,
             'sex' => 'male',
             'status' => '1',
-            'reply_on' => '',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -86,7 +83,6 @@ class MessageSeeder extends Seeder
             'age' => 24,
             'sex' => 'male',
             'status' => '1',
-            'reply_on' => '',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
