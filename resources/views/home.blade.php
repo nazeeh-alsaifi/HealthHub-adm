@@ -100,7 +100,7 @@
     @if(!(Auth::user() == null))
         <div id="consult-form" style="padding: 30px">
             <div class="row justify-content-center">
-                <div class="py-4 col-md-8 col-md-12">
+                <div class="py-4 col-md-8">
                     <div class="card">
                         <div class="card-header text-center font-weight-bolder"><span class="card_header_text">Write Your Consult</span></div>
 
@@ -108,7 +108,7 @@
                             <form method="POST" action="{{ url('/message')}}" enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="form-group row">
+                                <div class="form-group consult-row row">
                                     <label for="subject"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
 
@@ -126,7 +126,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group consult-row row">
                                     <label for="phone_num"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
@@ -144,7 +144,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group consult-row row">
                                     <label for="age"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
 
@@ -161,11 +161,11 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group consult-row row">
                                     <label for="sex"
                                            class="col-2 col-sm-2 col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Male') }}</label>
 
-                                    <div style="width:1%">
+                                    <div style="width:2%">
                                         <input id="sex" type="radio"
                                                class="form-control @error('sex') is-invalid @enderror" name="sex"
                                                value="male"  required>
@@ -178,9 +178,9 @@
                                     </div>
 
                                     <label for="sex"
-                                           class="col-2 col-sm-2 col-md-1 col-lg-1 col-form-label text-md-right">{{ __('Female') }}</label>
+                                           class="col-2 col-sm-2 col-md-2 col-lg-2 col-form-label text-md-right">{{ __('Female') }}</label>
 
-                                    <div style="width:1%">
+                                    <div style="width:2%">
                                         <input id="sex" type="radio"
                                                class="form-control @error('sex') is-invalid @enderror" name="sex"
                                                value="female" required>
@@ -193,7 +193,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group consult-row row">
                                     <label for="body"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
 
@@ -210,7 +210,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group consult-row row">
                                     <label for="captcha"
                                            class="col-md-4 col-form-label text-md-right">{{ __('captcha') }}</label>
 
@@ -234,7 +234,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row mb-0">
+                                <div class="form-group consult-row row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
                                             {{ __('Submit') }}

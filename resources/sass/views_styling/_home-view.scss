@@ -3,13 +3,11 @@
     padding-top: 10vh;
     background-image: url("/images/unsplash.jpg");
     background-size: auto;
-    background-repeat: no-repeat;
 
 }
 #homebg {
     background-image: url("/images/unsplash.jpg");
     background-size: auto;
-    background-repeat: no-repeat;
 }
 
 .smaller-card {
@@ -73,4 +71,8 @@ h1.h-bold, h2.h-bold, h3.h-bold, h4.h-bold, h5.h-bold, h6.h-bold {
     font-weight: 800;
     font-size: 20px;
     line-height: 1.6em;
+}
+
+.consult-row{
+    margin-bottom: 2rem;
 }
