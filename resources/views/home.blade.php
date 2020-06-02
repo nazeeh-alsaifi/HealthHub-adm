@@ -75,7 +75,7 @@
                                                 src="/public/images/{{$article->image}}"
                                                 alt=""></a>
                                         <div class="card-body">
-                                            <h4 class="card-title">
+                                            <h4 class="card-title ">
                                                 <a href="{{route('article_show',$article->id)}}">{{$article->title}}</a>
                                             </h4>
                                             <p class="card-text">{{$article->description}}</p>
