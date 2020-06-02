@@ -103,42 +103,15 @@ Here is what he told us, alongside more information on the current state of conv
             'id' => 3,
             'title' => 'Sleep calculator: How much sleep do you need?',
             'description' => 'To get into a good sleep routine, a person can start by figuring out exactly how much sleep they need. Then, they can determine when they should be going to bed and waking up for optimal health.',
-            'content' => 'Though there are general guidelines, some people need more sleep than others, due to their lifestyle, any health conditions, and their genetic makeup.
-
-The National Sleep Foundation (NSF) recommend that people of different ages get the following amounts of sleep every 24 hours:
-
-1- newborns (0–3 months): 14–17 hours
-
-2- infants (4–11 months): 12–15 hours
-
-3- toddlers (1–2 years): 11–14 hours
-
-4- preschoolers (3–5 years): 10–13 hours
-
-5- school-age children (6–13 years): 9–11 hours
-
-6- teenagers (14–17 years): 8–10 hours
-
-7- younger adults (18–25 years): 7–9 hours
-
-8- adults (26–64 years): 7–9 hours
-older adults (65 years and above): 7–8 hours
-
-Sleep cycles
-
-To be properly rested, the body must go through several sleep cycles per night, including rapid eye movement (REM) sleep and non-REM sleep.
-
-The stages of sleep include:
-
-Stage 1 non-REM: This lasts for only a few minutes. Breathing, heart rate, and brain waves begin to slow.
-
-Stage 2 non-REM: This stage occurs before the body enters deep sleep. The muscles relax even more, and body temperature drops.
-
-Stage 3 non-REM: A person needs to reach this stage of deep sleep to feel rested, and it lasts longer in the first half of the night. Breathing and heart rate slow to their lowest levels.
-
-REM sleep: Within 90 minutes of falling asleep, a person enters REM sleep. The brain becomes more active, the most dreaming occurs, and the arms and legs become temporarily paralyzed.
-
-If the body does not go through these stages several times a night, the person may wake feeling fatigued and unfocused.',
+            'content' => '<p>Experts believe that sleep is just as important to a person’s health as food and water. Getting the <a href="/articles/325353" class="content-link css-29oowu">right amount of sleep</a> can help prevent disease, boost immunity, and improve <a rel="noopener noreferrer" href="/articles/154543" target="_blank" class="content-link css-29oowu">mental health</a>. </p>
+<p>Still, many of us are not getting enough sleep. The <a href="https://www.cdc.gov/media/releases/2016/p0215-enough-sleep.html" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu">Centers for Disease Control and Prevention (CDC)</a> estimate that about one-third of adults consistently do not get the sleep that they need. </p>
+<p>Building a healthy sleep pattern may require tweaking the schedule or lifestyle. While this can be challenging at first, the benefits of proper sleep are worth the effort.</p>
+<p>Though there are general guidelines, some people need more sleep than others, due to their lifestyle, any health conditions, and their genetic makeup.</p>
+<p>The <a href="https://www.sleepfoundation.org/articles/how-much-sleep-do-we-really-need" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu">National Sleep Foundation (NSF)</a> recommend that people of different ages get the following amounts of sleep every 24 hours:</p>
+<ul class="ml-4"><li><strong>newborns (0–3 months)</strong>: 14–17 hours </li><li><strong>infants (4–11 months)</strong>: 12–15 hours </li><li><strong>toddlers (1–2 years)</strong>: 11–14 hours </li><li><strong>preschoolers (3–5 years)</strong>: 10–13 hours </li><li><strong>school-age children (6–13 years)</strong>: 9–11 hours </li><li><strong>teenagers (14–17 years)</strong>: 8–10 hours</li><li><strong>younger adults (18–25 years)</strong>: 7–9 hours </li><li><strong>adults (26–64 years)</strong>: 7–9 hours</li><li><strong>older adults (65 years and above)</strong>: 7–8 hours</li></ul>
+<div class="css-0"><span style="font-size:0"></span><h2><div><a name="getting-enough-sleep">How to get the right amount</a></div></h2><p>The following chart can help a person figure out when they need to be going to bed to get 8 hours of sleep a night.<br><br>The <a href="https://www.sleep.org/articles/how-long-to-fall-asleep/" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu">NSF report</a> that, on average, people take 10–20 minutes to fall asleep. The calculations below assume that a person needs 15 minutes, but if someone tends to take longer, they should adjust their bedtime accordingly.</p><div class="able-responsive table-wrapper-scroll-y my-custom-scrollbar"><table class="table table-responsive"><tbody><tr><td><strong>Wake-up time</strong></td><td><strong>Bedtime (to get 8 hours of sleep):</strong></td></tr><tr><td>4:00 a.m.</td><td>7:45 p.m.</td></tr><tr><td>4:30 a.m.</td><td>8:15 p.m.</td></tr><tr><td>5:00 a.m.</td><td>8:45 p.m.</td></tr><tr><td>5:30 a.m.</td><td>9:15 p.m.</td></tr><tr><td>6:00 a.m.</td><td>9:45 p.m.</td></tr><tr><td>6:30 a.m.</td><td>10:15 p.m.</td></tr><tr><td>7:00 a.m.</td><td>10:45 p.m.</td></tr><tr><td>7:30 a.m.</td><td>11:15 p.m.</td></tr><tr><td>8:00 a.m.</td><td>11:45 p.m.</td></tr><tr><td>8:30 a.m.</td><td>12:15 a.m.</td></tr></tbody></table></div>
+</div>
+<div class="css-0"><span style="font-size:0"></span><h2><div><a name="sleep-cycles">Sleep cycles</a></div></h2><p>To be properly rested, the body must go through several sleep cycles per night, including <a href="/articles/247927" class="content-link css-29oowu">rapid eye movement (</a><a rel="noreferrer noopener" href="/articles/247927" target="_blank" class="content-link css-29oowu">REM</a><a href="/articles/247927" class="content-link css-29oowu">) sleep</a> and non-REM sleep. </p><p>The stages of sleep include:</p><ul class="ml-4"><li><strong>Stage 1 non-REM</strong>: This lasts for only a few minutes. Breathing, heart rate, and brain waves begin to slow.</li><li><strong>Stage 2 non-REM</strong>: This stage occurs before the body enters deep sleep. The muscles relax even more, and body temperature drops.</li><li><strong>Stage 3 non-REM</strong>: A person needs to reach this stage of deep sleep to feel rested, and it lasts longer in the first half of the night. Breathing and heart rate slow to their lowest levels.</li><li><strong>REM sleep</strong>: Within 90 minutes of falling asleep, a person enters REM sleep. The brain becomes more active, the most dreaming occurs, and the arms and legs become temporarily paralyzed.</li></ul><p>If the body does not go through these stages several times a night, the person may wake feeling fatigued and unfocused.</p></div>',
             'image' => '20200602173041.jpg',
             'created_at' => now(),
             'updated_at' => now(),
