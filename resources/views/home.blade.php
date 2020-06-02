@@ -325,7 +325,7 @@
                                 <div class="box text-center">
                                     <i class="fa fa-user-md fa-3x circled bg-skin"></i>
                                     <h4 class="h-bold">Consult A Doctor</h4>
-                                    <p>
+                                    <p style="font-size: 18px">
                                         Send us a consultation and our team of doctors will reply.
                                     </p>
                                 </div>
@@ -336,8 +336,8 @@
                                 <div class="box text-center">
 
                                     <i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
-                                    <h4 class="h-bold">Get diagnostic for heart disease</h4>
-                                    <p>
+                                    <h4 class="h-bold">Heart Disease Diagnostic</h4>
+                                    <p style="font-size: 18px">
                                         Use our Expert System to get a diagnosis for heart disease by filling one application.
                                     </p>
                                 </div>
@@ -355,11 +355,11 @@
             <section id="partner" class="home-section paddingbot-60">
                 <div class="container marginbot-50">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8 col-lg-offset-2">
+                        <div class="col-lg-9 col-lg-offset-2">
                             <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                                 <div class="section-heading text-center">
                                     <h2 class="h-bold">Who Are We..</h2>
-                                    <p>Nazeeh Saifi & Mhd Suliman Tanbari</p>
+                                    <p>Nazeeh Al-Saifi & Muhammad Sulaiman Tanbari</p>
                                     <p> students continuing their studies in <a href="https://www.svuonline.org/">Syrian Virtual University</a> in Master Of Web Science.</p>
                                 </div>
                             </div>

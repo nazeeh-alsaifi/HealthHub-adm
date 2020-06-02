@@ -13,19 +13,16 @@
     <!-- Scripts -->
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-{{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--}}
-{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>--}}
-{{--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>--}}
-<!-- Fonts -->
+
+    <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href={{secure_asset("font-awesome/css/font-awesome.min.css")}} rel="stylesheet" type="text/css" />
+    <link href={{secure_asset("font-awesome/css/font-awesome.min.css")}} rel="stylesheet" type="text/css"/>
 
     <!-- Styles -->
-    {{--    <link href="{{ asset('css/newStyle.css') }}" rel="stylesheet">--}}
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 
 </head>
@@ -63,9 +60,10 @@
             <nav class="nav-menu d-none d-lg-block ">
                 <ul>
                     <li class="nav-item"><a class="nav-link"
-                                                   href="{{route('member',Auth::user()->username ?? '')}}">Home</a></li>
+                                            href="{{route('member',Auth::user()->username ?? '')}}">Home</a></li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ??'')}}#most_viewed">Most Viewed</a>
+                                            href="{{route('member',Auth::user()->username ??'')}}#most_viewed">Most
+                            Viewed</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
                                             href="{{route('member',Auth::user()->username ?? '')}}#articles">Articles</a>
@@ -74,7 +72,8 @@
                                             href="{{route('member',Auth::user()->username ?? '')}}#services">Services</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ?? '')}}#about_us">About Us</a>
+                                            href="{{route('member',Auth::user()->username ?? '')}}#about_us">About
+                            Us</a>
                     </li>
 
                     @if(Auth::user() == null)
@@ -87,9 +86,11 @@
                             </li>
                         @else
                             <li class="nav-item"><a class="nav-link"
-                                                    href="{{route('member',Auth::user()->username)}}#consult-form">Consult A
+                                                    href="{{route('member',Auth::user()->username)}}#consult-form">Consult
+                                    A
                                     Doctor</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{route('expert_create')}}">Use Expert System</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('expert_create')}}">Use Expert
+                                    System</a></li>
 
                         @endif
                     @endif
