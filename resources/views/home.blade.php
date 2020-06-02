@@ -252,7 +252,7 @@
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8 col-lg-12">
                     <div class="card ">
-                        <div class="card-header text-center font-weight-bolder"><span class="card_header_text"> My Conultations </span></div>
+                        <div class="card-header text-center font-weight-bolder"><span class="card_header_text"> My Consultations </span></div>
                         <div class="row">
                             <div class="col-lg-12 col-sm-12 mb-2 ">
                                 <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
