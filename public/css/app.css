@@ -11822,7 +11822,6 @@ article {
 
 #home {
   max-width: 100%;
-  padding-bottom: 20vh;
   padding-top: 10vh;
   background-image: url("/images/unsplash.jpg");
   background-size: auto;
@@ -11877,6 +11876,36 @@ article {
 
 .paddingtop-80 {
   padding-top: 80px !important;
+}
+
+#partner {
+  padding-top: 150px;
+  display: block;
+  position: relative;
+  z-index: 120;
+}
+
+.paddingbot-60 {
+  padding-bottom: 60px !important;
+}
+
+h1.h-bold,
+h2.h-bold,
+h3.h-bold,
+h4.h-bold,
+h5.h-bold,
+h6.h-bold {
+  font-weight: 700;
+}
+
+.marginbot-50 {
+  margin-bottom: 50px !important;
+}
+
+.section-heading p {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.6em;
 }
 
 #articles-create {
@@ -11947,6 +11976,7 @@ tr.hide-table-padding td {
 body {
   position: relative;
   min-height: 100vh;
+  font-size: 16px;
 }
 
 main {
