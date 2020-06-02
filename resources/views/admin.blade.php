@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="admin-home" class="container">
+    <div id="home" class="container">
         <div id="most_viewed" >
             <div class="row justify-content-center">
                 <div class="py-4 col-md-8">
