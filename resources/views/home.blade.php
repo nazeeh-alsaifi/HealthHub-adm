@@ -359,7 +359,7 @@
                             <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                                 <div class="section-heading text-center">
                                     <h2 class="h-bold">Who Are We..</h2>
-                                    <p>Nazeeh Al-Saifi & Muhammad Sulaiman Tanbari</p>
+                                    <p>Nazeeh Al-Saifi: nazeeh_132544 & Muhammad Sulaiman Tanbari: mohammad_sulaiman_116892</p>
                                     <p> students continuing their studies in <a href="https://www.svuonline.org/">Syrian Virtual University</a> in Master Of Web Science.</p>
                                 </div>
                             </div>
