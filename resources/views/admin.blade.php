@@ -177,14 +177,41 @@
             </div>
         </div>
 
-        <div id="services" >
-            <div class="row justify-content-center">
-                <div class="py-4 col-md-8">
-                    <div class="card">
-                        <div class="card-header">services</div>
+        <div id="services">
+            <!-- Section: boxes -->
+            <section id="boxes" class="home-section paddingtop-80">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-3 col-md-4">
+                            <div class="wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="box text-center">
+                                    <i class="fa fa-user-md fa-3x circled bg-skin"></i>
+                                    <h4 class="h-bold">Consult A Doctor</h4>
+                                    <p>
+                                        Send us a consultation and our team of doctors will reply.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-4">
+                            <div class="wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="box text-center">
+
+                                    <i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
+                                    <h4 class="h-bold">Get diagnostic for heart disease</h4>
+                                    <p>
+                                        Use our Expert System to get a diagnosis for heart disease by filling one application.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+            </section>
+            <!-- /Section: boxes -->
+
         </div>
 
         <div id="about_us" >
