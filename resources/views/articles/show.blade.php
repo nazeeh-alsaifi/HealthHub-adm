@@ -12,7 +12,7 @@
                         <div class="row ml-sm-0">
                             <div class="col-lg-12 col-sm-6 mb-2 mt-2" style="font-family: 'Merriweather', serif;text-align: left">
                                 <h5><b>{{$articleInfo->description}}</b></h5>
-                                <p style="padding-top:20px;font-family: 'Merriweather', serif;">{!! html_entity_decode($articleInfo->content) !!}</p>
+                                <p style="padding-top:20px;font-family: 'Merriweather', serif;">{!! $articleInfo->content !!}</p>
                             </div>
                         </div>
                     </div>
