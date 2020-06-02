@@ -27,7 +27,7 @@
             stroke="black" stroke-width="0.2" mask="url(#path-1-outside-1)"/>
 
     </svg>
-    <div class="basic" style="position:absolute;animation-delay: 2.5s;padding-top: 20%"><h2>إعداد الطلاب : محمد سليمان طنبري:mohammad_sulaiman_116892 - نزيه الصيفي:nazeeh_132544</h2></div>
+    <div class="basic" style="position:absolute;animation-delay: 2.5s;padding-top: 20%"><h2>إعداد الطلاب : محمد سليمان طنبري - نزيه الصيفي</h2></div>
 </div>
 
 <script type="application/javascript">

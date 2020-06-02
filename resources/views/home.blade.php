@@ -355,7 +355,7 @@
             <section id="partner" class="home-section paddingbot-60">
                 <div class="container marginbot-50">
                     <div class="row justify-content-center">
-                        <div class="col-lg-9 col-lg-offset-2">
+                        <div class="col-lg-10 col-lg-offset-2">
                             <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                                 <div class="section-heading text-center">
                                     <h2 class="h-bold">Who Are We..</h2>
