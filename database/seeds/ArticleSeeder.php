@@ -205,65 +205,27 @@ While these are early days, the team suggests that this newfound knowledge may e
             'id' => 5,
             'title' => 'Alcohol-related liver disease: New drug targets found',
             'description' => 'A study combining analysis of patient samples with mice studies has identified new drug targets for alcohol-related liver disease, which, currently, doctors can only treat by transplant.',
-            'content' => 'Alcohol-related liver disease (ALD), as its name suggests, is damage to the liver that the excessive consumption of alcohol causes.
+            'content' => '<p>Alcohol-related liver disease (ALD), as its name suggests, is damage to the liver that the excessive consumption of alcohol causes.</p>
+<p>Over time, excessive alcohol consumption can cause inflammation and scarring (fibrosis) of liver tissue, and may eventually lead to liver failure. </p>
+<p>According to an analysis of trends published in the World Journal of Hepatology in 2017, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5756720/" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu">16.5%</a> of all liver transplants between 2002–2015 occurred as a result of ALD, making the disease the third most common reason for transplantation. </p>
+<p>ALD is irreversible, and there is currently no treatment except for liver transplant. </p>
+<p>Doctors typically advise people to stop drinking alcohol altogether to prevent further damage. This has limited success rates in those with alcohol misuse disorder and even has <a href="/articles/322373" class="content-link css-29oowu">risks in itself</a>.</p>
+<p>A team from Massachusetts General Hospital have been working to identify desperately needed treatments for ALD. </p>
+<p>In a new study featured in the journal <a href="https://www.pnas.org/content/early/2020/05/08/1911870117" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu"><em>PNAS</em></a>, they describe the molecular basis for the disease and possible new drug targets.</p>
+<h2><div><a name="Analyzing-liver-cells"><strong>Analyzing liver cells</strong></a></div></h2>
+<p>To better understand what causes the liver damage seen in ALD, the researchers started by analyzing human liver samples taken from a cohort of 51 people with varying degrees of ALD severity. </p>
+<p>They looked at the expression of different genes in the samples using a technology called <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-017-0467-4" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu">RNA sequencing</a>.</p>
+<p>They found that the expression of several genes, including one called cGAS, was higher in individuals with more severe disease.</p>
+<p>The gene cGAS is part of a known biological pathway that involves the molecule IRF3. Researchers already know that activation of this pathway causes the death of liver cells.</p>
+<p>In people with ALD, the cGAS-IRF3 pathway initiates an inflammatory response that damages nearby cells and can eventually cause the liver to fail.</p>
+<p>In people with ALD, the cGAS-IRF3 pathway initiates an inflammatory response that damages nearby cells and can eventually cause the liver to fail.</p>
+<p>This study confirms the importance of cGAS<em></em>in ALD-related liver damage and shows that the level of cGAS expression in liver tissue has links with the severity of the disease.</p>
 
-Over time, excessive alcohol consumption can cause inflammation and scarring (fibrosis) of liver tissue, and may eventually lead to liver failure.
+<div class="css-0">
+<span style="font-size:0"></span><h2><div><a name="Uncovering-the-mechanism"><strong>Uncovering the mechanism</strong></a></div></h2>
+<p>Scientists know that the cGAS-IRF3 pathway is important in ALD but have been unsure about how alcohol activates the IRF3 molecule, and what causes inflammation to spread throughout the liver.</p><p>Understanding this process is critical because the propagation of the inflammatory signal can continue to damage the liver, even when the person has stopped drinking alcohol.</p><p>To investigate this in more detail, the researchers turned to animal models. They fed mice the <a href="https://pubmed.ncbi.nlm.nih.gov/30025151/" target="_blank" rel="noopener noreferrer" class="content-link css-29oowu">Lieber-DeCarli diet,</a> which is an established model of chronic alcohol abuse in rodents. They found that the mice had increased levels of both cGAS and IRF3 in their liver tissue.</p><p>If excess alcohol causes an increase in the expression of these molecules, can removing them protect against alcohol-induced damage?</p><p>To test this, the team genetically engineered mice to remove the cGAS protein. When exposed to alcohol, these mice had both less IRF3 activation and less damage to their liver.</p><p>This showed that cGAS is critical to the ALD disease process and, therefore, a potential drug target.</p><p>The team also found another possible target called Cx32, which they showed to be important in IRF3 activation and the death of liver cells. </p><p>Mice without the gene for coding Cx32 had significantly less liver damage after consuming excess alcohol. The scientists also saw beneficial effects when they inhibited the molecule.</p></div>
 
-According to an analysis of trends published in the World Journal of Hepatology in 2017, 16.5% of all liver transplants between 2002–2015 occurred as a result of ALD, making the disease the third most common reason for transplantation.
-
-ALD is irreversible, and there is currently no treatment except for liver transplant.
-
-Doctors typically advise people to stop drinking alcohol altogether to prevent further damage. This has limited success rates in those with alcohol misuse disorder and even has risks in itself.
-
-A team from Massachusetts General Hospital have been working to identify desperately needed treatments for ALD.
-
-In a new study featured in the journal PNAS, they describe the molecular basis for the disease and possible new drug targets.
-
-Analyzing liver cells:
-
-To better understand what causes the liver damage seen in ALD, the researchers started by analyzing human liver samples taken from a cohort of 51 people with varying degrees of ALD severity.
-
-They looked at the expression of different genes in the samples using a technology called RNA sequencing.
-
-They found that the expression of several genes, including one called cGAS, was higher in individuals with more severe disease.
-
-The gene cGAS is part of a known biological pathway that involves the molecule IRF3. Researchers already know that activation of this pathway causes the death of liver cells.
-
-In people with ALD, the cGAS-IRF3 pathway initiates an inflammatory response that damages nearby cells and can eventually cause the liver to fail.
-
-This study confirms the importance of cGASin ALD-related liver damage and shows that the level of cGAS expression in liver tissue has links with the severity of the disease.
-
-Uncovering the mechanism:
-
-Scientists know that the cGAS-IRF3 pathway is important in ALD but have been unsure about how alcohol activates the IRF3 molecule, and what causes inflammation to spread throughout the liver.
-
-Understanding this process is critical because the propagation of the inflammatory signal can continue to damage the liver, even when the person has stopped drinking alcohol.
-
-To investigate this in more detail, the researchers turned to animal models. They fed mice the Lieber-DeCarli diet, which is an established model of chronic alcohol abuse in rodents. They found that the mice had increased levels of both cGAS and IRF3 in their liver tissue.
-
-If excess alcohol causes an increase in the expression of these molecules, can removing them protect against alcohol-induced damage?
-
-To test this, the team genetically engineered mice to remove the cGAS protein. When exposed to alcohol, these mice had both less IRF3 activation and less damage to their liver.
-
-This showed that cGAS is critical to the ALD disease process and, therefore, a potential drug target.
-
-The team also found another possible target called Cx32, which they showed to be important in IRF3 activation and the death of liver cells.
-
-Mice without the gene for coding Cx32 had significantly less liver damage after consuming excess alcohol. The scientists also saw beneficial effects when they inhibited the molecule.
-
-Encouraging news:
-
-If scientists could repeat these findings in human studies, it would be an important step toward treating ALD, which has no successful treatments, so far, despite an increasing number of patients.
-
-“Now that we know the key players in this pathway, we finally have drug targets for treatment development.”
-
-– Lead author Dr. Jay Luther, gastroenterologist and Director of the Mass General Alcohol Liver Center
-
-In showing what drives the activation of IRF3, the team also identified a molecular pathway critical to the disease process. This is a big step forward in scientific terms.
-
-“Until now, we had only a few clues about why alcohol-related liver disease progresses the way it does, but this research fills in key pieces of the puzzle,” explains Dr. Suraj J. Patel, senior author and research fellow in the Department of Medicine at Massachusetts General.
-
-The discovery of Cx32 as a key regulator of this process makes it an evidence-based target for drug development. This will be welcome news to the many millions of people living with ALD worldwide.',
+<div class="css-0"><span style="font-size:0"></span><h2><div><a name="Encouraging-news">Encouraging news</a></div></h2><p>If scientists could repeat these findings in human studies, it would be an important step toward treating ALD, which has no successful treatments, so far, despite an increasing number of patients.</p><blockquote class="css-34gtoi"><strong></strong><p>“Now that we know the key players in this pathway, we finally have drug targets for treatment development.”<br><br>– Lead author Dr. Jay Luther, gastroenterologist and Director of the Mass General Alcohol Liver Center</p></blockquote><p>In showing what drives the activation of IRF3, the team also identified a molecular pathway critical to the disease process. This is a big step forward in scientific terms. </p><p>“Until now, we had only a few clues about why alcohol-related liver disease progresses the way it does, but this research fills in key pieces of the puzzle,” explains Dr. Suraj J. Patel, senior author and research fellow in the Department of Medicine at Massachusetts General. </p><p>The discovery of Cx32 as a key regulator of this process makes it an evidence-based target for drug development. This will be welcome news to the many millions of people living with ALD worldwide.</p></div>',
             'image' => '20200602185535.jpg',
             'created_at' => now(),
             'updated_at' => now(),
