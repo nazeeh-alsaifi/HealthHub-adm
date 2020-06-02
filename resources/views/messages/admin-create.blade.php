@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-    <div id="consults-create" class="container" style="padding: 12vh;">
+    <div id="login" class="container" style="padding: 12vh;">
         <div class="row justify-content-center">
-            <div class="py-4 col-md-8">
+            <div class="py-4 col-md-12">
                 <div class="card">
                     <div
                         class="card-header">{{ __('Write Your Reply') . ' To ' . App\User::find($sentBy)->name  }}</div>
@@ -12,9 +12,9 @@
                             @csrf
                             <div class="form-group row">
                                 <label for="subject"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
+                                       class="col-md-2 col-form-label text-md-right">{{ __('Subject') }}</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input id="subject" type="text" class="form-control " name="subject"
                                            value="{{ App\Message::find($messageId)->subject }}" readonly autofocus>
                                 </div>
@@ -23,11 +23,11 @@
 
                             <div class="form-group row">
                                 <label for="body"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
+                                       class="col-md-2 col-form-label text-md-right">{{ __('Content') }}</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <textarea id="body" class="form-control @error('body') is-invalid @enderror"
-                                              name="body" required></textarea>
+                                              name="body" rows="8" cols="50" required></textarea>
 
                                     @error('body')
                                     <span class="invalid-feedback" role="alert">

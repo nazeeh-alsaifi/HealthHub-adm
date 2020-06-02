@@ -7,6 +7,11 @@
     background-repeat: no-repeat;
 
 }
+#homebg {
+    background-image: url("/images/unsplash.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
 .smaller-card {
     background: lighten(#3D3F4B, 50%);
@@ -31,3 +36,20 @@
 .table-wrapper-scroll-y {
     display: block;
 }
+.box i {
+    margin-bottom: 30px;
+}
+.bg-skin {
+    background: #3D3F4B;
+}
+.circled {
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+}
+.paddingtop-80{padding-top:80px !important;}
+
