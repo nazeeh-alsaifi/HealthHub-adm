@@ -12,7 +12,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -71,7 +70,6 @@
 
 
     <main>
-        @include('sweetalert::alert')
         @yield('content')
     </main>
 

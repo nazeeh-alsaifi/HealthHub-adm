@@ -161,12 +161,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
-        mews\Captcha\CaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,9 +226,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Captcha' => mews\Captcha\Facades\Captcha::class,
-        'Image' => Intervention\Image\Facades\Image::class,
-        'Alert' => RealRashid\SweetAlert\Facades\Alert::class
     ],
 
 ];
