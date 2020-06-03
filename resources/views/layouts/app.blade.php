@@ -46,7 +46,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo d-flex mr-auto">
-                <h1 class="text-light pr-sm-1"><a href="{{route('member',Auth::user()->username ?? '')}}">HealthHub</a>
+                <h1 class="text-light pr-sm-1"><a href="{{route('expert_create')}}">HealthHub</a>
                 </h1>
 
                 <div><img src="{{asset('/images/redh_blues.png')}}"
@@ -59,76 +59,9 @@
 
             <nav class="nav-menu d-none d-lg-block ">
                 <ul>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ?? '')}}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ??'')}}#most_viewed">Most
-                            Viewed</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ?? '')}}#articles">Articles</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ?? '')}}#services">Services</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{route('member',Auth::user()->username ?? '')}}#about_us">About
-                            Us</a>
-                    </li>
 
-                    @if(Auth::user() == null)
-                        <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Consult A Doctor</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Use Expert System</a></li>
-
-                    @else
-                        @if(Auth::user()->username == 'admin')
-                            <li class="nav-item"><a class="nav-link" href="#users_consultations">Users Consultations</a>
-                            </li>
-                        @else
-                            <li class="nav-item"><a class="nav-link"
-                                                    href="{{route('member',Auth::user()->username)}}#consult-form">Consult
-                                    A
-                                    Doctor</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{route('expert_create')}}">Use Expert
-                                    System</a></li>
-
-                        @endif
-                    @endif
-                    <li class="nav-item drop-down">
-
-
-                    @guest
-
-                        <li class="nav-item drop-down">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Register/Login <span class="caret"></span>
-                            </a>
-                            <ul>
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                @if (Route::has('register'))
-                                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                                @endif
-                            </ul>
-                    @else
-                        <li class="nav-item drop-down">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-                            <ul>
-                                <li><a class="nav-link" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                </li>
-                            </ul>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                  style="display: none;">
-                                @csrf
-                            </form>
-                    @endguest
+                    <li class="nav-item"><a class="nav-link" href="{{route('expert_create')}}">Use Expert
+                            System</a></li>
                 </ul>
             </nav>
             <!-- .nav-menu -->

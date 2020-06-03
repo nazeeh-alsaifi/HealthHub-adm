@@ -3,7 +3,7 @@
 @section('content')
     <div id="expert-create" class="container" style="padding: 12vh;">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header input-label text-center">Fill The Application :</div>
 
@@ -12,7 +12,7 @@
                             @csrf
                             <div class="expert-row form-group row">
                                 <label for="age"
-                                       class="input-label col-md-4 col-form-label text-md-right">{{ __('Age:') }}</label>
+                                       class="input-label col-md-3 col-form-label text-md-right">{{ __('Age:') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="age" type="text" class="form-control @error('age') is-invalid @enderror"
@@ -29,7 +29,7 @@
 
                             <div class="expert-row form-group row">
                                 <label for="chest_pain_type"
-                                       class="input-label col-md-4 col-form-label text-md-right">{{ __('Chest Pain Type:') }}</label>
+                                       class="input-label col-md-3 col-form-label text-md-right">{{ __('Chest Pain Type:') }}</label>
                                 <label for="chest_pain_type"
                                        class="col-sm-2 col-form-label text-md-right">{{ __('Asympt') }}</label>
 
@@ -78,7 +78,7 @@
 
                             <div class="expert-row form-group row">
                                 <label for="discrete_rest_blood"
-                                       class="input-label col-md-4 col-form-label text-md-right">{{ __('rest_blood') }}</label>
+                                       class="input-label col-md-3 col-form-label text-md-right">{{ __('Rest Blood:') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="discrete_rest_blood" type="text"
@@ -96,7 +96,7 @@
 
                             <div class="expert-row form-group row">
                                 <label for="blood_sugar"
-                                       class="input-label col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Blood Sugar:') }}</label>
+                                       class="input-label col-md-3  col-form-label text-md-right">{{ __('Blood Sugar:') }}</label>
 
 
                                 <label for="blood_sugar"
@@ -133,7 +133,7 @@
 
                             <div class="expert-row form-group row">
                                 <label for="rest_electro"
-                                       class="input-label col-md-4 col-lg-4 col-form-label text-md-right">{{ __('Rest Electro:') }}</label>
+                                       class="input-label col-md-3  col-form-label text-md-right">{{ __('Rest Electro:') }}</label>
 
 
                                 <label for="rest_electro"
@@ -185,7 +185,7 @@
                             </div>
                             <div class="expert-row form-group row">
                                 <label for="discrete_max_heart"
-                                       class="input-label col-md-4 col-form-label text-md-right">{{ __('Max Heart Rate:') }}</label>
+                                       class="input-label col-md-3 col-form-label text-md-right">{{ __('Max Heart Rate:') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="discrete_max_heart" type="text"
@@ -203,7 +203,7 @@
 
                             <div class="expert-row form-group row">
                                 <label for="exercice_angina"
-                                       class="input-label col-md-4 col-form-label text-md-right">{{ __('Exercice Angina:') }}</label>
+                                       class="input-label col-md-3 col-form-label text-md-right">{{ __('Exercice Angina:') }}</label>
 
 
                                 <label for="exercice_angina"
@@ -241,7 +241,7 @@
 
                             <div class="expert-row form-group row">
                                 <label for="expert-algorithm"
-                                       class="input-label col-md-4 col-form-label text-md-right">{{ __('Choose Algorithm:') }}</label>
+                                       class="input-label col-md-3 col-form-label text-md-right">{{ __('Choose Algorithm:') }}</label>
 
 
                                 <label for="expert-algorithm"

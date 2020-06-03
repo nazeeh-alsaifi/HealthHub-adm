@@ -11808,149 +11808,6 @@ article {
   }
 }
 
-#register {
-  background-image: url("/images/bg1.jpg");
-  max-width: 100%;
-  padding-bottom: 32vh;
-}
-
-#login {
-  background-image: url("/images/bg1.jpg");
-  max-width: 100%;
-  padding-bottom: 32vh;
-}
-
-#home {
-  max-width: 100%;
-  padding-top: 10vh;
-  background-image: url("/images/unsplash.jpg");
-  background-size: auto;
-}
-
-#homebg {
-  background-image: url("/images/unsplash.jpg");
-  background-size: auto;
-}
-
-.smaller-card {
-  background: #bdbfca;
-}
-
-.smaller-card a {
-  color: #3D3F4B;
-  font-weight: 800;
-}
-
-#admin-replies thead {
-  background: #BDBFCA;
-}
-
-.my-custom-scrollbar {
-  position: relative;
-  height: 30vh;
-  overflow: auto;
-}
-
-.table-wrapper-scroll-y {
-  display: block;
-}
-
-.box i {
-  margin-bottom: 30px;
-}
-
-.bg-skin {
-  background: #3D3F4B;
-}
-
-.circled {
-  border-radius: 50%;
-  display: inline-block;
-  color: #fff;
-  width: 1.6em;
-  height: 1.6em;
-  text-align: center;
-  line-height: 1.6em;
-}
-
-.paddingtop-80 {
-  padding-top: 80px !important;
-}
-
-#partner {
-  padding-top: 150px;
-  display: block;
-  position: relative;
-  z-index: 120;
-}
-
-.paddingbot-60 {
-  padding-bottom: 60px !important;
-}
-
-h1.h-bold,
-h2.h-bold,
-h3.h-bold,
-h4.h-bold,
-h5.h-bold,
-h6.h-bold {
-  font-weight: 700;
-}
-
-.marginbot-50 {
-  margin-bottom: 50px !important;
-}
-
-.section-heading p {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.6em;
-}
-
-.consult-row {
-  margin-bottom: 2rem;
-}
-
-#articles-create {
-  background-image: url("/images/bg1.jpg");
-  max-width: 100%;
-  padding-bottom: 32vh;
-}
-
-tr.hide-table-padding td {
-  padding: 0;
-}
-
-.expand-button {
-  position: relative;
-}
-
-.accordion-toggle .expand-button:after {
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translate(0, -50%);
-  content: "-";
-}
-
-.accordion-toggle.collapsed .expand-button:after {
-  content: "+";
-}
-
-#users_consultations thead {
-  background: #BDBFCA;
-}
-
-.my-custom-scrollbar {
-  position: relative;
-  height: 40vh;
-  overflow: auto;
-}
-
-.table-wrapper-scroll-y {
-  display: block;
-}
-
 #expert-create {
   background-image: url("/images/bg1.jpg");
   background-repeat: no-repeat;
@@ -11960,11 +11817,11 @@ tr.hide-table-padding td {
 }
 
 .expert-radio-button {
-  width: 2%;
+  width: 1%;
 }
 
 .expert-row {
-  margin-bottom: 3rem;
+  margin-bottom: 5vh;
 }
 
 .input-label {

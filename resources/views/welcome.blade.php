@@ -32,7 +32,7 @@
 
 <script type="application/javascript">
     setTimeout(function () {
-        window.location.href= 'home'; // the redirect goes here
+        window.location.href= 'expert/create'; // the redirect goes here
 
     },7000); // 5 seconds
 </script>

@@ -14,7 +14,6 @@ class ExpertController extends Controller
     {
         $this->bayes = new bayes(public_path('bayes_training.csv'));
         $this->id3 =  new DecisionTree(public_path('bayes_training.csv'), 0);
-        $this->middleware('auth');
     }
 
     function userCreate()
